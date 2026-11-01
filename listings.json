@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31",
+ "checked": "31 October and 1 November 2026",
  "homes": [
   {
    "id": "p24-112386134",
@@ -15,21 +15,27 @@
    "outdoor": null,
    "security": [],
    "available": "2026-10-31",
-   "when": "other",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "112386134",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/brandwag/bloemfontein/free-state/9647/112386134",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": true,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -46,25 +52,29 @@
    "outdoor": null,
    "security": [],
    "available": "2026-10-31",
-   "when": "other",
+   "utilities": null,
    "agency": "Platinum Global",
    "agent": null,
    "ref": "117497369",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/westdene/bloemfontein/free-state/9707/117497369",
-   "unknowns": [
-    "The old site listed a newly painted R5 950 Westdene flat. Is this the same one?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "In the heart of Second Avenue"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -81,21 +91,27 @@
    "outdoor": null,
    "security": [],
    "available": null,
-   "when": "other",
+   "utilities": null,
    "agency": "Edric Trust",
    "agent": null,
    "ref": "117543689",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/westdene/bloemfontein/free-state/9707/117543689",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 2
    }
   },
   {
@@ -114,32 +130,38 @@
     "Good security"
    ],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Prepaid electricity (Centlec)",
    "agency": "Crons Properties",
    "agent": "Jacques Van Zyl",
    "ref": "117717285",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/westdene/bloemfontein/free-state/9707/117717285",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "Newly renovated",
+    "Faces north, so the sun warms it in winter",
+    "Kitchen with a hob",
+    "Bus and minibus taxis nearby",
+    "No pets",
+    "Lease: 12 months or longer"
+   ],
    "unknowns": [
     "Which street and building is it in?",
     "Which floor is it on?",
     "What does the advert mean by good security?"
    ],
-   "notes": [
-    "Newly renovated",
-    "Faces north, so the sun warms it in winter",
-    "Kitchen with a hob",
-    "Bus and minibus taxis nearby",
-    "Pets: No pets",
-    "Lease: 12 months or longer"
-   ],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": true,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -156,23 +178,29 @@
    "outdoor": null,
    "security": [],
    "available": null,
-   "when": "other",
+   "utilities": null,
    "agency": "Edric Trust",
    "agent": null,
    "ref": "117545688",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/westdene/bloemfontein/free-state/9707/117545688",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Close to shopping centres"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 2
    }
   },
   {
@@ -189,23 +217,84 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "117760345",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/117760345",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Open-plan kitchen and living area"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 1
+   }
+  },
+  {
+   "id": "old-bains-6700",
+   "title": "Bains Lodge two-bedroom",
+   "suburb": "Bains Lodge",
+   "type": "Apartment",
+   "rent": 6700,
+   "deposit": null,
+   "beds": 2,
+   "baths": 1,
+   "size": 55,
+   "parking": "1 covered bay",
+   "outdoor": null,
+   "security": [
+    "24-hour cameras",
+    "Cell-phone gate access"
+   ],
+   "available": "2026-11-01",
+   "utilities": "Prepaid electricity bought at the complex office; water not stated.",
+   "agency": "Quattro Investment Properties",
+   "agent": "Meagan Cornelissen",
+   "ref": "114057969",
+   "source": "Property24",
+   "url": "https://www.property24.com/to-rent/arcadia-sh/bloemfontein/free-state/18346/114057969",
+   "checked": "2026-11-01",
+   "areaNote": "Inside Bains Lodge, per the advert.",
+   "facts": [
+    "Two double bedrooms",
+    "Open-plan kitchen with built-in stove and a washing-machine point",
+    "Laundromat, small grocery shop and restaurants on the premises",
+    "Fibre in the complex (apply through Iclix)",
+    "Central DStv point",
+    "Tiled and laminate floors",
+    "No pets"
+   ],
+   "unknowns": [
+    "Can the lease start on 1 December?",
+    "Are children welcome?",
+    "What is the deposit?",
+    "Which floor is it on?",
+    "Is R6 700 the full monthly rent? The advert also shows it under rates and taxes.",
+    "Can an existing Bains Lodge tenant move units without paying double rent?"
+   ],
+   "bains": "lodge",
+   "draw": {
+    "form": "apartment",
+    "garden": false,
+    "balcony": false,
+    "garage": false,
+    "carport": true,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -224,32 +313,38 @@
     "Totally walled property"
    ],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Prepaid electricity, communal laundry",
    "agency": "Just Property",
    "agent": "Leila Smith",
    "ref": "117720714",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/117720714",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "Built-in cupboards in both bedrooms",
+    "Bathroom with a bath",
+    "Recently renovated kitchen cupboards",
+    "No stove included",
+    "No pets",
+    "Lease: 12 months"
+   ],
    "unknowns": [
     "The advert says ground floor, but the details say floor 1. Which is it?",
     "Is the garden shared or private?",
     "No stove is included. Can one be supplied?"
    ],
-   "notes": [
-    "Built-in cupboards in both bedrooms",
-    "Bathroom with a bath",
-    "Recently renovated kitchen cupboards",
-    "No stove included",
-    "Pets: No pets",
-    "Lease: 12 months"
-   ],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": true,
-    "wall": true,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -266,23 +361,29 @@
    "outdoor": null,
    "security": [],
    "available": "2026-10-31",
-   "when": "other",
+   "utilities": null,
    "agency": "Quattro Investment Properties",
    "agent": null,
    "ref": "117029952",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117029952",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Close to shopping centres and UFS"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 4
    }
   },
   {
@@ -299,59 +400,85 @@
    "outdoor": null,
    "security": [],
    "available": "2026-10-01",
-   "when": "other",
+   "utilities": null,
    "agency": "Pam Golding Properties",
    "agent": null,
    "ref": "117577936",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117577936",
-   "unknowns": [
-    "Advertised from 1 October. Is it still free?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Aircon and ceiling fan",
     "Built-in cupboards"
    ],
+   "unknowns": [
+    "Advertised from 1 October. Is it still free?"
+   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
-   "id": "p24-103351789",
-   "title": "Ground-floor flat with a stoep",
+   "id": "p24-110393154",
+   "title": "New two-bedroom with a balcony",
    "suburb": "Bainsvlei",
    "type": "Apartment",
-   "rent": 7300,
+   "rent": 7340,
    "deposit": null,
    "beds": 2,
    "baths": 1,
-   "size": null,
-   "parking": "2",
-   "outdoor": "Stoep and communal areas",
-   "security": [],
-   "available": "2026-10-31",
-   "when": "other",
-   "agency": "Valor Real Estate",
-   "agent": null,
-   "ref": "103351789",
-   "source": "Property24",
-   "url": "https://www.property24.com/to-rent/bainsvlei/bloemfontein/free-state/12675/103351789",
-   "unknowns": [],
-   "notes": [
-    "Open-plan kitchen with built-in stove"
+   "size": 65,
+   "parking": "Covered carport",
+   "outdoor": "Balcony and garden",
+   "security": [
+    "Electric gate",
+    "Security gate",
+    "Perimeter wall"
    ],
+   "available": "2026-12-01",
+   "utilities": null,
+   "agency": "National Real Estate",
+   "agent": "Lerato Molokoane",
+   "ref": "110393154",
+   "source": "Property24",
+   "url": "https://www.property24.com/to-rent/bainsvlei/bloemfontein/free-state/12675/110393154",
+   "checked": "2026-11-01",
+   "areaNote": "Bainsvlei. The advert doesn't name the complex, so ask whether it's at Bains Lodge.",
+   "facts": [
+    "First floor of a new development",
+    "Balcony, and a private garden is mentioned",
+    "Communal pool",
+    "Built-in cupboards in both bedrooms",
+    "Open-plan lounge and kitchen with a stove"
+   ],
+   "unknowns": [
+    "Is it at Bains Lodge or another complex?",
+    "Is the garden for this unit, given it's on the first floor?",
+    "Are water and electricity included?",
+    "Are children welcome?",
+    "What is the deposit?"
+   ],
+   "bains": "area",
    "draw": {
-    "garden": false,
-    "wall": false,
+    "form": "apartment",
+    "garden": true,
+    "balcony": true,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": true,
+    "wall": true,
+    "pool": true,
+    "wendy": false,
+    "palette": 1
    }
   },
   {
@@ -368,28 +495,34 @@
    "outdoor": "Garden",
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": null,
    "agency": "Top Let",
    "agent": "Anria Kruger",
    "ref": "117754575",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117754575",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "Fibre available",
+    "Unfurnished",
+    "Pets allowed"
+   ],
    "unknowns": [
     "Is the garden private and fenced?",
     "What security does the complex have?"
    ],
-   "notes": [
-    "Fibre available",
-    "Unfurnished",
-    "Pets: Pets allowed"
-   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": true,
-    "wall": false,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 4
    }
   },
   {
@@ -408,21 +541,27 @@
     "Secured complex"
    ],
    "available": "2026-11-02",
-   "when": "other",
+   "utilities": null,
    "agency": "Platinum Global",
    "agent": null,
    "ref": "117547468",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117547468",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": true,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 1
    }
   },
   {
@@ -441,29 +580,35 @@
     "Secure complex"
    ],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": null,
    "agency": "Top Let",
    "agent": "Anria Kruger",
    "ref": "117753966",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117753966",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "Walking distance to a shopping centre",
+    "Separate dining room",
+    "Fibre available",
+    "No pets"
+   ],
    "unknowns": [
     "Which floor is it on?",
     "Is there any outdoor space?"
    ],
-   "notes": [
-    "Walking distance to a shopping centre",
-    "Separate dining room",
-    "Fibre available",
-    "Pets: No pets"
-   ],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": true,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 4
    }
   },
   {
@@ -484,30 +629,36 @@
     "Alarm system on your own account"
    ],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Electricity metered and billed by the body corporate (deposit and connection fees apply)",
    "agency": "Premium Homes",
    "agent": "Imke Du Plessis",
    "ref": "110260662",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/110260662",
-   "unknowns": [
-    "How much are the electricity deposit and connection fees?",
-    "Is the garden private?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Main bedroom en suite",
     "Tiled bedrooms with built-in cupboards",
     "Built-in stove and oven, washing-machine connection",
     "Single storey, in a complex",
-    "Pets: Dogs allowed, no cats"
+    "Dogs allowed, no cats"
    ],
+   "unknowns": [
+    "How much are the electricity deposit and connection fees?",
+    "Is the garden private?"
+   ],
+   "bains": null,
    "draw": {
+    "form": "house",
     "garden": true,
-    "wall": false,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -524,26 +675,32 @@
    "outdoor": null,
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": null,
    "agency": "Valor Real Estate",
    "agent": null,
    "ref": "101351728",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/101351728",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "The advert says it is within walking distance of UFS"
+   ],
    "unknowns": [
     "Is it a student building?",
     "What security and outdoor space are there?"
    ],
-   "notes": [
-    "The advert says it is within walking distance of UFS"
-   ],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 3
    }
   },
   {
@@ -560,25 +717,31 @@
    "outdoor": null,
    "security": [],
    "available": "2027-01-01",
-   "when": "other",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "117684442",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117684442",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "Advertised twice (Property24 117684442 and 117548119)"
+   ],
    "unknowns": [
     "Would they start it on 1 December instead?"
    ],
-   "notes": [
-    "Advertised twice (Property24 117684442 and 117548119)"
-   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 4
    }
   },
   {
@@ -597,21 +760,27 @@
     "Advertised as secure"
    ],
    "available": null,
-   "when": "other",
+   "utilities": null,
    "agency": "Calitz Real Estate",
    "agent": null,
    "ref": "117732618",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117732618",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 3
    }
   },
   {
@@ -628,26 +797,32 @@
    "outdoor": null,
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": null,
    "agency": "Sarel Venter Properties",
    "agent": null,
    "ref": "117770025",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/117770025",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "Lots of cupboard space"
+   ],
    "unknowns": [
     "Is there a garden?",
     "What security does it have?"
    ],
-   "notes": [
-    "Lots of cupboard space"
-   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 1
    }
   },
   {
@@ -666,24 +841,30 @@
     "Security gate entrance"
    ],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": "Pam Golding Properties",
    "agent": null,
    "ref": "117599958",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117599958",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Open-plan kitchen with oven and hob",
     "Tiled lounge, built-in cupboards"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 3
    }
   },
   {
@@ -702,31 +883,38 @@
     "Security gate entrance"
    ],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Water and electricity both prepaid",
    "agency": "Pam Golding Properties",
    "agent": null,
    "ref": "RR4810913",
    "source": "Private Property",
    "url": "https://www.privateproperty.co.za/to-rent/free-state/central-free-state/bloemfontein/langenhoven-park/RR4810913",
-   "unknowns": [
-    "Is there a garden with the unit?",
-    "Which complex is it? The advert says to ask the agent."
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Open-plan lounge and kitchen",
     "Lots of kitchen cupboards",
     "Built-in cupboards in both bedrooms",
     "Shower over the bath",
     "Wendy house",
-    "Listed 28 October 2026"
+    "Listed 28 October 2026",
+    "With body corporate permission"
    ],
+   "unknowns": [
+    "Is there a garden with the unit?",
+    "Which complex is it? The advert says to ask the agent."
+   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": true,
+    "wall": true,
+    "pool": false,
+    "wendy": true,
+    "palette": 3
    }
   },
   {
@@ -743,28 +931,34 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "106820384",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/106820384",
-   "unknowns": [
-    "Is there a private garden?",
-    "Would they start on 1 December?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Ground floor",
     "Open-plan living",
     "250 m² stand"
    ],
+   "unknowns": [
+    "Is there a private garden?",
+    "Would they start on 1 December?"
+   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 3
    }
   },
   {
@@ -781,23 +975,29 @@
    "outdoor": null,
    "security": [],
    "available": "2026-10-31",
-   "when": "other",
+   "utilities": null,
    "agency": "Rawson Properties Bloemfontein",
    "agent": null,
    "ref": "117637405",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117637405",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Advertised for a couple or small family"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 2
    }
   },
   {
@@ -814,29 +1014,35 @@
    "outdoor": "Own garden",
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": null,
    "agency": "Property Pro Trading",
    "agent": null,
    "ref": "116658814",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/116658814",
-   "unknowns": [
-    "Property24 and Private Property give different dates. Can it start on 1 December?",
-    "Pets and security?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Ground floor",
     "Open-plan living and kitchen",
     "Aircon in the living room",
     "Property24 says available now; Private Property says 1 December."
    ],
+   "unknowns": [
+    "Property24 and Private Property give different dates. Can it start on 1 December?",
+    "Pets and security?"
+   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": true,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 1
    }
   },
   {
@@ -853,30 +1059,36 @@
    "outdoor": "Own garden",
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Prepaid electricity, fibre",
    "agency": "Property Pro Trading",
    "agent": "Adré Jacobs",
    "ref": "117382281",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117382281",
-   "unknowns": [
-    "What security does the estate have: wall, electric fence, gate control?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Ground floor",
     "Open-plan living room and kitchen",
     "Aircon in the living room",
     "Near Pick n Pay, Checkers, Spar and Woolworths Food",
     "The advert says about 6 km from UFS",
-    "Pets: Pet friendly"
+    "Pet friendly"
    ],
+   "unknowns": [
+    "What security does the estate have: wall, electric fence, gate control?"
+   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": true,
-    "wall": false,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 1
    }
   },
   {
@@ -893,30 +1105,36 @@
    "outdoor": "Own garden",
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Prepaid electricity, fibre",
    "agency": "Property Pro Trading",
    "agent": "Nicola Rykheer",
    "ref": "117711689",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117711689",
-   "unknowns": [
-    "What security does the estate have: wall, electric fence, gate control?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Ground floor",
     "Open-plan living room and kitchen",
     "Aircon in the living room",
     "Near Pick n Pay, Checkers, Spar and Woolworths Food",
     "The advert says about 6 km from UFS",
-    "Pets: Pet friendly"
+    "Pet friendly"
    ],
+   "unknowns": [
+    "What security does the estate have: wall, electric fence, gate control?"
+   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": true,
-    "wall": false,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -933,28 +1151,34 @@
    "outdoor": null,
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Prepaid",
    "agency": "Property Pro Trading",
    "agent": null,
    "ref": "117682609",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117682609",
-   "unknowns": [
-    "Are the stairs safe for a toddler?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Top-floor unit",
     "Open-plan living and kitchen",
     "Aircon in the living room",
     "Also advertised as Property24 117553074"
    ],
+   "unknowns": [
+    "Are the stairs safe for a toddler?"
+   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -971,31 +1195,37 @@
    "outdoor": null,
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Prepaid electricity, water fixed at R350 a month",
    "agency": "Pam Golding Properties",
    "agent": "Ross Bostock",
    "ref": "117682325",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/117682325",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "Two en-suite bathrooms",
+    "Built-in cupboards",
+    "Open-plan kitchen, tiled lounge",
+    "601 m² stand",
+    "Small pets"
+   ],
    "unknowns": [
     "The advert gives 226 m² for the floor. Is that right for two bedrooms?",
     "Is there a private yard on the stand?",
     "What security does it have?"
    ],
-   "notes": [
-    "Two en-suite bathrooms",
-    "Built-in cupboards",
-    "Open-plan kitchen, tiled lounge",
-    "601 m² stand",
-    "Pets: Small pets"
-   ],
+   "bains": null,
    "draw": {
+    "form": "duet",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": true,
-    "house": false
+    "carport": true,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 4
    }
   },
   {
@@ -1014,29 +1244,35 @@
     "Access-controlled complex"
    ],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Prepaid electricity (UMS), water billed after use, fibre",
    "agency": "Leapfrog Bloemfontein",
    "agent": "Kgosi Hendricks",
    "ref": "117636354",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117636354",
-   "unknowns": [
-    "Which complex is it, and how is the gate controlled?"
-   ],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Aircon in both bedrooms",
     "Built-in cupboards",
     "Open-plan kitchen and living area",
     "Unfurnished",
-    "Pets: One small dog or sterilised cat, with body corporate approval"
+    "One small dog or sterilised cat, with body corporate approval"
    ],
+   "unknowns": [
+    "Which complex is it, and how is the gate controlled?"
+   ],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": true,
-    "wall": true,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 2
    }
   },
   {
@@ -1053,21 +1289,27 @@
    "outdoor": null,
    "security": [],
    "available": null,
-   "when": "other",
+   "utilities": null,
    "agency": "Powerhouse Properties",
    "agent": null,
    "ref": "117684081",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/westdene/bloemfontein/free-state/9707/117684081",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "apartment",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": true,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -1084,29 +1326,35 @@
    "outdoor": "Front and back garden",
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": "Prepaid electricity, water billed by Mangaung",
    "agency": "Rawson Properties Bloemfontein North",
    "agent": "Yodette Rossouw",
    "ref": "117699964",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117699964",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "In a cul-de-sac",
+    "Open-plan living and kitchen",
+    "Floor size 104 m² (Private Property)",
+    "Pet friendly"
+   ],
    "unknowns": [
     "Is the garden yours alone?",
     "What security does it have?"
    ],
-   "notes": [
-    "In a cul-de-sac",
-    "Open-plan living and kitchen",
-    "Floor size 104 m² (Private Property)",
-    "Pets: Pet friendly"
-   ],
+   "bains": null,
    "draw": {
+    "form": "duet",
     "garden": true,
-    "wall": false,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": true,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 1
    }
   },
   {
@@ -1123,24 +1371,30 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": "National Real Estate",
    "agent": null,
    "ref": "108079472",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/108079472",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Advertised as “no deposit required” (terms apply)",
     "Built-in cupboards"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 3
    }
   },
   {
@@ -1157,21 +1411,27 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": "RE/MAX First",
    "agent": null,
    "ref": "117756389",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117756389",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -1188,23 +1448,29 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": "Water included, prepaid electricity",
    "agency": null,
    "agent": null,
    "ref": "108702482",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/108702482",
-   "unknowns": [],
-   "notes": [
-    "Pets: No pets"
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
+    "No pets"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -1221,21 +1487,27 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "117570438",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117570438",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 4
    }
   },
   {
@@ -1252,21 +1524,27 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": "Just Property",
    "agent": null,
    "ref": "117690943",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117690943",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 0
    }
   },
   {
@@ -1285,23 +1563,29 @@
     "Secure complex"
    ],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "117606153",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117606153",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "The advert describes a well-maintained complex"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": true,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": true,
+    "pool": false,
+    "wendy": false,
+    "palette": 1
    }
   },
   {
@@ -1318,23 +1602,29 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "117591942",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117591942",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Main bedroom en suite"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": true,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 4
    }
   },
   {
@@ -1351,24 +1641,30 @@
    "outdoor": null,
    "security": [],
    "available": "2026-12-01",
-   "when": "dec",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "104150554",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/104150554",
-   "unknowns": [],
-   "notes": [
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [
     "Corner unit",
     "Advertised for a young couple or small family"
    ],
+   "unknowns": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 4
    }
   },
   {
@@ -1385,23 +1681,29 @@
    "outdoor": "Communal pool",
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": "Engel & Völkers",
    "agent": null,
    "ref": "117641842",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117641842",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [
     "Is the pool fenced with a self-closing gate?"
    ],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": true,
+    "wendy": false,
+    "palette": 3
    }
   },
   {
@@ -1418,21 +1720,27 @@
    "outdoor": null,
    "security": [],
    "available": "2026-11-01",
-   "when": "other",
+   "utilities": null,
    "agency": null,
    "agent": null,
    "ref": "117633589",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117633589",
+   "checked": "2026-10-31",
+   "areaNote": null,
+   "facts": [],
    "unknowns": [],
-   "notes": [],
+   "bains": null,
    "draw": {
+    "form": "townhouse",
     "garden": false,
-    "wall": false,
+    "balcony": false,
     "garage": false,
-    "flat": false,
-    "duet": false,
-    "house": false
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 3
    }
   }
  ]
