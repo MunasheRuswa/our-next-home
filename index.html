@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Our next home</title>
+<meta name="description" content="Two-bedroom homes for 1 December, cheapest first.">
+<meta property="og:title" content="Our next home">
+<meta property="og:description" content="Two-bedroom homes for 1 December, cheapest first. Heart the ones you like.">
+<meta property="og:image" content="https://munasheruswa.github.io/our-next-home/og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16130F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#F4EFE6;--card:#FFFBF4;--sunk:#EAE3D6;--ink:#2A231C;--muted:#6E6357;--line:#E0D7C8;
+  --accent:#B2522F;--accent-ink:#fff;--accent-soft:#F6DFD3;
+  --green:#3F7A52;--green-soft:#DDEBDD;--amber:#94650F;--amber-soft:#F4E6C5;--grey-soft:#E6E1D8;
+  --sky:#DCE9EF;--grass:#9CC08A;--wall:#E9D9C0;--roof:#B2522F;--trunk:#7A5A3A;
+  --shadow:0 1px 0 rgba(42,35,28,.04),0 10px 26px -18px rgba(42,35,28,.35);
+  --f-d:"Fraunces",Georgia,serif;--f-b:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--r:18px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#16130F;--card:#211C17;--sunk:#0F0D0A;--ink:#F1EADF;--muted:#B3A795;--line:#352E26;
+  --accent:#E58C66;--accent-ink:#1A0F0A;--accent-soft:#3D2419;
+  --green:#8FCB9F;--green-soft:#1C3023;--amber:#E5BC63;--amber-soft:#382B12;--grey-soft:#2C2620;
+  --sky:#1F2C33;--grass:#4F6E45;--wall:#5A4A38;--roof:#B9643F;--trunk:#8A6A4A;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 12px 30px -18px rgba(0,0,0,.8);color-scheme:dark}}
+:root[data-theme=dark]{--bg:#16130F;--card:#211C17;--sunk:#0F0D0A;--ink:#F1EADF;--muted:#B3A795;--line:#352E26;--accent:#E58C66;--accent-ink:#1A0F0A;--accent-soft:#3D2419;--green:#8FCB9F;--green-soft:#1C3023;--amber:#E5BC63;--amber-soft:#382B12;--grey-soft:#2C2620;--sky:#1F2C33;--grass:#4F6E45;--wall:#5A4A38;--roof:#B9643F;--trunk:#8A6A4A;color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--f-b);overflow-x:hidden}
+a{color:var(--accent)}button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+h1,h2,h3{font-family:var(--f-d);font-weight:600;line-height:1.12;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.muted{color:var(--muted)}.small{font-size:.88rem}.num{font-variant-numeric:tabular-nums}
+
+header.top{padding-top:calc(22px + env(safe-area-inset-top))}
+.hello{display:grid;gap:10px;padding-bottom:6px}
+.hello h1{font-size:clamp(2rem,8vw,3.2rem);letter-spacing:-.01em}
+.hello h1 em{font-style:normal;color:var(--accent)}
+.lede{color:var(--muted);max-width:56ch}
+
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--card);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:6px 8px calc(6px + env(safe-area-inset-bottom))}
+nav.tabs button{flex:1;max-width:140px;border:0;background:none;display:grid;justify-items:center;gap:2px;padding:6px 4px;border-radius:12px;font-size:.74rem;font-weight:700;color:var(--muted);cursor:pointer;position:relative;min-height:52px}
+nav.tabs button svg{width:22px;height:22px}
+nav.tabs button[aria-current=page]{color:var(--accent);background:var(--accent-soft)}
+nav.tabs .ct{position:absolute;top:2px;right:calc(50% - 26px);background:var(--accent);color:var(--accent-ink);border-radius:999px;font-size:.66rem;padding:0 6px;line-height:1.5}
+@media (min-width:760px){nav.tabs{position:sticky;top:0;bottom:auto;border-top:0;border-bottom:1px solid var(--line);justify-content:center;gap:8px;background:var(--bg);padding:8px}
+  nav.tabs button{flex:0 0 auto;max-width:none;grid-auto-flow:column;gap:8px;padding:8px 16px;font-size:.92rem;min-height:44px}
+  nav.tabs .ct{position:static}}
+main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+
+.bar{position:sticky;top:0;z-index:10;background:var(--bg);padding-block:12px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+@media (min-width:760px){.bar{top:61px}}
+.bar::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:700;cursor:pointer;min-height:40px;white-space:nowrap}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.newnote{background:var(--amber-soft);color:var(--ink);border-radius:14px;padding:12px 14px;margin:8px 0 4px;font-size:.92rem;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.newnote button{border:0;background:none;font-weight:800;color:var(--amber);cursor:pointer;min-height:40px}
+.count{color:var(--muted);font-size:.9rem;margin:8px 0 12px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:grid;min-width:0;position:relative}
+.card.no{opacity:.55}
+.card .pic{border:0;padding:0;background:var(--sky);display:block;width:100%;cursor:pointer;aspect-ratio:16/9}
+.card .pic svg{display:block;width:100%;height:100%}
+.card .body{padding:14px 16px 16px;display:grid;gap:6px;min-width:0}
+.price{font-family:var(--f-d);font-size:1.7rem;line-height:1}
+.price small{font:600 .85rem var(--f-b);color:var(--muted)}
+.card h3{font-size:1.15rem}
+.card h3 button{all:unset;cursor:pointer}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.pill{font-size:.78rem;font-weight:700;border-radius:999px;padding:3px 9px;background:var(--grey-soft);color:var(--ink)}
+.pill.g{background:var(--green-soft);color:var(--green)}
+.pill.a{background:var(--amber-soft);color:var(--amber)}
+.pill.r{background:var(--accent-soft);color:var(--accent)}
+.heart{position:absolute;top:10px;right:10px;width:46px;height:46px;border-radius:50%;border:0;background:color-mix(in srgb,var(--card) 92%,transparent);box-shadow:var(--shadow);display:grid;place-items:center;cursor:pointer}
+.heart svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:2}
+.heart[aria-pressed=true] svg{fill:var(--accent)}
+.mine{font-size:.8rem;font-weight:800}
+.mine.love{color:var(--green)}.mine.maybe{color:var(--amber)}.mine.no{color:var(--muted)}
+
+.sheet{position:fixed;inset:0;z-index:40;background:rgba(20,15,10,.45);display:flex;align-items:flex-end;justify-content:center}
+.sheet .panel{background:var(--bg);width:100%;max-width:640px;max-height:92vh;overflow-y:auto;border-radius:22px 22px 0 0;padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+@media (min-width:760px){.sheet{align-items:center}.sheet .panel{border-radius:22px;max-height:88vh}}
+.sheet .pic svg{display:block;width:100%;height:auto}
+.sheet .in{padding:16px 18px;display:grid;gap:16px}
+.close{position:sticky;top:0;display:flex;justify-content:flex-end;padding:10px 10px 0;margin-bottom:-56px;z-index:2}
+.close button{width:44px;height:44px;border-radius:50%;border:0;background:var(--card);box-shadow:var(--shadow);font-size:1.3rem;cursor:pointer}
+.sheet h2{font-size:1.6rem}
+.dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:.95rem}
+.dl dt{color:var(--muted)}.dl dd{margin:0;text-align:right}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px}
+.box h3{font-family:var(--f-b);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.box ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.react{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.react button{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:10px 6px;font-weight:800;cursor:pointer;min-height:48px}
+.react button[aria-pressed=true][data-v=love]{background:var(--green-soft);border-color:var(--green);color:var(--green)}
+.react button[aria-pressed=true][data-v=maybe]{background:var(--amber-soft);border-color:var(--amber);color:var(--amber)}
+.react button[aria-pressed=true][data-v=no]{background:var(--grey-soft);border-color:var(--muted)}
+textarea{width:100%;min-height:90px;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:12px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:14px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:800;text-decoration:none;cursor:pointer;text-align:center}
+.btn.ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.row .btn{flex:1 1 160px}
+
+.section{padding-top:18px;display:grid;gap:14px}
+.section h2{font-size:1.7rem}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center}
+.pick b{font-size:1rem}.pick .price{font-size:1.2rem}
+.pick button{all:unset;cursor:pointer;display:grid;gap:2px}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:22px;display:grid;gap:8px}
+table.cmp{border-collapse:collapse;width:100%;min-width:520px;font-size:.9rem}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.cmp th,.cmp td{padding:10px 12px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+.cmp thead th{border-top:0;font-family:var(--f-d);font-size:1rem}
+.cmp tbody th{color:var(--muted);font-weight:700;position:sticky;left:0;background:var(--card)}
+.check li{list-style:none}
+.check ul{padding:0;margin:0;display:grid;gap:10px}
+.check label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.check input{width:22px;height:22px;margin-top:1px;accent-color:var(--green);flex:none}
+.check input:checked+span{color:var(--muted);text-decoration:line-through}
+.when{font-size:.8rem;font-weight:800;color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(92px + env(safe-area-inset-bottom));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:700;z-index:60;font-size:.9rem}
+footer{padding-top:30px;color:var(--muted);font-size:.82rem}
+</style>
+</head>
+<body>
+<header class="top wrap">
+  <div class="hello">
+    <h1>Our next <em>home</em></h1>
+    <p class="lede" id="lede">Two-bedroom homes in Bloemfontein, cheapest first. Tap the heart on any you like, open one to leave a note, then send me your picks.</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button data-tab="homes" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Homes</button>
+  <button data-tab="picks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>My picks<span class="ct" id="ct" hidden></span></button>
+  <button data-tab="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg>Plan</button>
+</nav>
+
+<main class="wrap" id="main"></main>
+<div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-label="Home details"></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(() => {
+"use strict";
+const SITE = "https://munasheruswa.github.io/our-next-home/";
+const $ = (s, r = document) => r.querySelector(s);
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const R = n => n == null ? "" : "R" + Number(n).toLocaleString("en-ZA").replace(/,/g, " ");
+const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const fd = s => { if (!s) return ""; const [y,m,d] = s.split("-").map(Number); return `${d} ${M[m-1]} ${y}`; };
+const store = { get(k, d) { try { const v = localStorage.getItem("onh:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+                set(k, v) { try { localStorage.setItem("onh:" + k, JSON.stringify(v)); } catch {} } };
+function toast(m) { const t = $("#toast"); t.textContent = m; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2400); }
+
+const S = { homes: [], updated: "", tab: "homes", filter: store.get("filter", "dec"), me: store.get("me", {}), seen: store.get("seen", null), newIds: [], showNew: false, open: null };
+const mine = id => S.me[id] || {};
+function save() { store.set("me", S.me); }
+function setMe(id, patch) { S.me[id] = Object.assign({}, mine(id), patch); save(); }
+const picked = () => S.homes.filter(h => mine(h.id).heart || mine(h.id).v === "love" || mine(h.id).v === "maybe");
+
+/* ---------- illustration ---------- */
+function draw(h, big) {
+  const d = h.draw || {};
+  const sky = `<rect width="320" height="180" fill="var(--sky)"/><circle cx="40" cy="38" r="16" fill="#F3C969" opacity=".9"/>`;
+  const ground = `<rect y="140" width="320" height="40" fill="${d.garden ? "var(--grass)" : "var(--sunk)"}"/>`;
+  let b = "";
+  if (d.flat) {
+    b = `<rect x="88" y="34" width="120" height="110" rx="3" fill="var(--wall)"/><rect x="84" y="28" width="128" height="10" fill="var(--roof)"/>`;
+    for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) b += `<rect x="${102 + c*34}" y="${48 + r*28}" width="20" height="16" rx="2" fill="var(--sky)"/>`;
+    b += `<rect x="138" y="122" width="20" height="22" fill="var(--roof)" opacity=".8"/>`;
+  } else if (d.duet) {
+    b = `<polygon points="70,82 130,46 190,82" fill="var(--roof)"/><polygon points="130,82 190,46 250,82" fill="var(--roof)" opacity=".85"/>
+      <rect x="78" y="82" width="104" height="62" fill="var(--wall)"/><rect x="182" y="82" width="62" height="62" fill="var(--wall)" opacity=".85"/>
+      <rect x="96" y="96" width="24" height="18" rx="2" fill="var(--sky)"/><rect x="140" y="110" width="20" height="34" fill="var(--roof)" opacity=".8"/><rect x="200" y="96" width="24" height="18" rx="2" fill="var(--sky)"/>`;
+  } else {
+    b = `<polygon points="80,84 150,40 220,84" fill="var(--roof)"/><rect x="88" y="84" width="124" height="60" fill="var(--wall)"/>
+      <rect x="104" y="98" width="26" height="20" rx="2" fill="var(--sky)"/><rect x="170" y="98" width="26" height="20" rx="2" fill="var(--sky)"/><rect x="140" y="112" width="20" height="32" fill="var(--roof)" opacity=".8"/>`;
+  }
+  if (d.garage && !d.flat) b += `<rect x="220" y="104" width="54" height="40" fill="var(--wall)" opacity=".9"/><path d="M226 114h42M226 122h42M226 130h42M226 138h42" stroke="var(--muted)" stroke-width="1.5" opacity=".6"/>`;
+  if (d.garden) b += `<rect x="30" y="118" width="6" height="24" fill="var(--trunk)"/><circle cx="33" cy="108" r="18" fill="var(--grass)" stroke="var(--green)" stroke-width="2"/><circle cx="56" cy="146" r="4" fill="#F3C969"/><circle cx="66" cy="150" r="3.5" fill="var(--accent)"/>`;
+  if (d.wall) b += `<rect x="0" y="134" width="${d.garage && !d.flat ? 214 : 320}" height="10" fill="var(--wall)" stroke="var(--muted)" stroke-width="1" opacity=".95"/>${d.garage && !d.flat ? `<rect x="280" y="134" width="40" height="10" fill="var(--wall)" stroke="var(--muted)" stroke-width="1"/>` : ""}`;
+  return `<svg viewBox="0 0 320 180" role="img" aria-label="Drawing of a ${esc((h.type || "home").toLowerCase())}${d.garden ? " with a garden" : ""}">${sky}${ground}${b}</svg>`;
+}
+
+/* ---------- pills ---------- */
+function pills(h) {
+  const p = [`<span class="pill">${esc(h.beds)} bed · ${esc(h.baths ?? "?")} bath</span>`];
+  if (h.outdoor) p.push(`<span class="pill g">${esc(h.outdoor)}</span>`);
+  if (h.parking) p.push(`<span class="pill">${esc(h.parking)}</span>`);
+  if (h.security.length) p.push(`<span class="pill">${esc(h.security[0])}</span>`);
+  p.push(h.when === "dec" ? `<span class="pill r">From 1 Dec</span>` : `<span class="pill a">${h.available ? "From " + esc(fd(h.available)) : "Date to ask"}</span>`);
+  return `<div class="facts">${p.join("")}</div>`;
+}
+const VL = { love: "Love it", maybe: "Maybe", no: "Not for us" };
+function card(h) {
+  const m = mine(h.id);
+  return `<article class="card${m.v === "no" ? " no" : ""}">
+    <button class="pic" data-open="${esc(h.id)}" aria-label="Open ${esc(h.title)}">${draw(h)}</button>
+    <button class="heart" data-heart="${esc(h.id)}" aria-pressed="${!!m.heart}" aria-label="${m.heart ? "Remove heart from" : "Heart"} ${esc(h.title)}"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+    <div class="body">
+      <p class="price num">${R(h.rent)} <small>a month</small></p>
+      <h3><button data-open="${esc(h.id)}">${esc(h.title)}</button></h3>
+      <p class="small muted">${esc(h.suburb)} · ${esc(h.type || "")}${h.size ? ` · ${esc(h.size)} m²` : ""}</p>
+      ${pills(h)}
+      ${m.v ? `<p class="mine ${m.v}">${VL[m.v]}${m.note ? " · note saved" : ""}</p>` : m.note ? `<p class="mine">Note saved</p>` : ""}
+    </div>
+  </article>`;
+}
+
+/* ---------- views ---------- */
+function listFor(f) {
+  let l = S.homes;
+  if (f === "dec") l = l.filter(h => h.when === "dec");
+  if (f === "garden") l = l.filter(h => h.draw && h.draw.garden);
+  if (f === "under8") l = l.filter(h => h.rent <= 8000);
+  if (S.showNew) l = l.filter(h => S.newIds.includes(h.id));
+  return l.slice().sort((a, b) => a.rent - b.rent || a.title.localeCompare(b.title));
+}
+function viewHomes() {
+  const l = listFor(S.filter);
+  const chips = [["dec", "Ready 1 December"], ["all", "All homes"], ["garden", "With a garden"], ["under8", "Under R8 000"]];
+  return `<div class="bar" role="group" aria-label="Show">${chips.map(([k, t]) => `<button class="chip" data-filter="${k}" aria-pressed="${S.filter === k}">${t}</button>`).join("")}</div>
+    ${S.newIds.length ? `<div class="newnote"><span>${S.showNew ? "Showing only what's new since your last visit." : `${S.newIds.length} new since your last visit.`}</span><button data-act="new">${S.showNew ? "Show all" : "Show me"}</button></div>` : ""}
+    <p class="count">${l.length} home${l.length === 1 ? "" : "s"} · cheapest first</p>
+    ${l.length ? `<div class="grid">${l.map(card).join("")}</div>` : `<div class="empty"><b>Nothing here with this filter.</b><button class="btn ghost" data-filter="all">Show all homes</button></div>`}`;
+}
+function shareText() {
+  const ps = picked().sort((a, b) => a.rent - b.rent);
+  const lines = ps.map(h => {
+    const m = mine(h.id);
+    return `${m.v === "love" || (m.heart && m.v !== "maybe") ? "❤️" : "🤔"} ${h.title}, ${h.suburb}: ${R(h.rent)}${m.note ? `\n   "${m.note.trim()}"` : ""}\n   ${h.url}`;
+  });
+  return `My picks for our next home:\n\n${lines.join("\n\n")}\n\nSee them all: ${SITE}`;
+}
+function viewPicks() {
+  const ps = picked().sort((a, b) => a.rent - b.rent);
+  if (!ps.length) return `<div class="section"><h2>My picks</h2><div class="empty"><b>No picks yet.</b><p class="muted">Tap the heart on any home you like and it will show up here, ready to send.</p><button class="btn" data-tab="homes">Browse homes</button></div></div>`;
+  const rows = [["Rent", h => R(h.rent)], ["Deposit", h => h.deposit ? R(h.deposit) : "Ask"], ["Area", h => esc(h.suburb)], ["Type", h => esc(h.type || "")], ["Outdoor", h => esc(h.outdoor || "Not stated")], ["Parking", h => esc(h.parking || "Not stated")], ["From", h => h.available ? fd(h.available) : "Ask"], ["Your note", h => esc(mine(h.id).note || "")]];
+  return `<div class="section"><h2>My picks</h2>
+    <p class="muted">${ps.length} home${ps.length > 1 ? "s" : ""}, cheapest first. Your hearts and notes stay on this phone until you send them.</p>
+    <button class="btn" data-act="send">Send my picks</button>
+    <div style="display:grid;gap:8px">${ps.map(h => `<div class="pick"><button data-open="${esc(h.id)}"><b>${esc(h.title)}</b><span class="small muted">${esc(h.suburb)}${mine(h.id).v ? " · " + VL[mine(h.id).v] : ""}</span></button><span class="price num">${R(h.rent)}</span></div>`).join("")}</div>
+    ${ps.length > 1 ? `<h2 style="font-size:1.3rem;margin-top:8px">Side by side</h2><div class="tw"><table class="cmp"><thead><tr><th></th>${ps.map(h => `<th>${esc(h.title)}</th>`).join("")}</tr></thead><tbody>${rows.map(([k, f]) => `<tr><th>${k}</th>${ps.map(h => `<td class="num">${f(h)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}
+  </div>`;
+}
+const PLAN = [
+  ["This week", [["view", "Pick favourites and send them over"], ["book", "Book viewings for the top three"], ["docs", "Get IDs, three payslips and three months' bank statements ready"]]],
+  ["At each viewing", [["kids", "Ask: are children welcome?"], ["date", "Ask: can rent start on 1 December?"], ["garden", "Check the garden is private and fenced"], ["safe", "Check gate, walls and who has keys"], ["costs", "Ask about deposit, admin fee, water and electricity"]]],
+  ["Before signing", [["lease", "Lease says 1 December for both moving in and rent"], ["dep", "Deposit amount and refund terms are in writing"], ["photos", "Plan to photograph every room on move-in day"]]]
+];
+function viewPlan() {
+  const done = store.get("plan", {});
+  return `<div class="section check"><h2>The plan</h2><p class="muted">Tick things off as we go. Ticks are saved on this phone.</p>
+    ${PLAN.map(([t, items]) => `<div style="display:grid;gap:10px"><p class="when">${t}</p><ul>${items.map(([k, x]) => `<li><label><input type="checkbox" data-plan="${k}" ${done[k] ? "checked" : ""}><span>${x}</span></label></li>`).join("")}</ul></div>`).join("")}
+  </div>`;
+}
+function render() {
+  const main = $("#main");
+  main.innerHTML = (S.tab === "picks" ? viewPicks() : S.tab === "plan" ? viewPlan() : viewHomes())
+    + `<footer><p>Listings as advertised on ${fd(S.updated)}. Prices and dates are the agents' and can change; tap through to each advert for the real photos. Pictures here are drawings.</p></footer>`;
+  document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-current", b.dataset.tab === S.tab ? "page" : "false"));
+  const n = picked().length, ct = $("#ct"); ct.hidden = !n; ct.textContent = n;
+}
+
+/* ---------- detail sheet ---------- */
+function openHome(id) {
+  const h = S.homes.find(x => x.id === id); if (!h) return;
+  S.open = id; const m = mine(id), sh = $("#sheet");
+  sh.innerHTML = `<div class="panel">
+    <div class="close"><button data-act="close" aria-label="Close">✕</button></div>
+    <div class="pic">${draw(h, true)}</div>
+    <div class="in">
+      <div style="display:grid;gap:6px"><p class="price num">${R(h.rent)} <small>a month</small></p><h2>${esc(h.title)}</h2><p class="muted">${esc(h.suburb)} · ${esc(h.type || "")}</p>${pills(h)}</div>
+      <div class="react" role="group" aria-label="How do you feel about it?">${["love", "maybe", "no"].map(v => `<button data-v="${v}" aria-pressed="${m.v === v}">${VL[v]}</button>`).join("")}</div>
+      <a class="btn ghost" href="${esc(h.url)}" target="_blank" rel="noopener">See the real photos on ${esc(h.source || "the advert")} ↗</a>
+      <dl class="dl num">
+        <dt>Rent</dt><dd>${R(h.rent)}</dd>
+        <dt>Deposit</dt><dd>${h.deposit ? R(h.deposit) : "Not stated"}</dd>
+        <dt>Available</dt><dd>${h.available ? fd(h.available) : "Not stated"}</dd>
+        <dt>Bedrooms</dt><dd>${esc(h.beds)}</dd><dt>Bathrooms</dt><dd>${esc(h.baths ?? "?")}</dd>
+        ${h.size ? `<dt>Size</dt><dd>${esc(h.size)} m²</dd>` : ""}
+        ${h.parking ? `<dt>Parking</dt><dd>${esc(h.parking)}</dd>` : ""}
+        ${h.agency ? `<dt>Agency</dt><dd>${esc(h.agency)}</dd>` : ""}
+        ${h.ref ? `<dt>Reference</dt><dd>${esc(h.ref)}</dd>` : ""}
+      </dl>
+      ${h.notes.length ? `<div class="box"><h3>The advert says</h3><ul>${h.notes.map(x => `<li>${esc(x.replace(/^Pets: /, ""))}</li>`).join("")}</ul></div>` : ""}
+      ${h.unknowns.length ? `<div class="box"><h3>Still to find out</h3><ul>${h.unknowns.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+      <label style="display:grid;gap:6px"><b>My note</b><textarea id="note" placeholder="What did you like or worry about?">${esc(m.note || "")}</textarea></label>
+      <button class="btn" data-heartsheet aria-pressed="${!!m.heart}">${m.heart ? "♥ In my picks" : "♡ Add to my picks"}</button>
+    </div></div>`;
+  sh.hidden = false; document.body.style.overflow = "hidden";
+  $(".close button", sh).focus();
+}
+function closeSheet() { $("#sheet").hidden = true; document.body.style.overflow = ""; S.open = null; render(); }
+
+/* ---------- sharing ---------- */
+async function send() {
+  const text = shareText();
+  if (navigator.share) { try { await navigator.share({ title: "My picks", text }); return; } catch (e) { if (e && e.name === "AbortError") return; } }
+  const sh = $("#sheet"), enc = encodeURIComponent(text);
+  sh.innerHTML = `<div class="panel"><div class="close"><button data-act="close" aria-label="Close">✕</button></div><div class="in" style="padding-top:24px"><h2>Send my picks</h2>
+    <div class="row"><a class="btn" href="https://wa.me/?text=${enc}" target="_blank" rel="noopener">WhatsApp</a><a class="btn ghost" href="mailto:?subject=${encodeURIComponent("My picks for our next home")}&body=${enc}">Email</a><button class="btn ghost" data-act="copy">Copy</button></div>
+    <textarea readonly style="min-height:200px">${esc(text)}</textarea></div></div>`;
+  sh.hidden = false; document.body.style.overflow = "hidden";
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click", async e => {
+  const t = e.target.closest("button,a");
+  if (!t) { if (e.target.id === "sheet") closeSheet(); return; }
+  if (t.dataset.tab) { S.tab = t.dataset.tab; render(); scrollTo({ top: 0 }); return; }
+  if (t.dataset.filter) { S.filter = t.dataset.filter; S.showNew = false; store.set("filter", S.filter); render(); return; }
+  if (t.dataset.open) { openHome(t.dataset.open); return; }
+  if (t.dataset.heart) { const id = t.dataset.heart, on = !mine(id).heart; setMe(id, { heart: on }); render(); toast(on ? "Added to my picks" : "Removed from my picks"); return; }
+  if (t.hasAttribute("data-heartsheet")) { const on = !mine(S.open).heart; setMe(S.open, { heart: on }); openHome(S.open); toast(on ? "Added to my picks" : "Removed from my picks"); return; }
+  if (t.dataset.v && S.open) { const v = mine(S.open).v === t.dataset.v ? null : t.dataset.v; setMe(S.open, { v, heart: v === "love" ? true : v === "no" ? false : mine(S.open).heart }); openHome(S.open); return; }
+  const a = t.dataset.act;
+  if (a === "close") closeSheet();
+  else if (a === "send") send();
+  else if (a === "new") { S.showNew = !S.showNew; render(); }
+  else if (a === "copy") { try { await navigator.clipboard.writeText(shareText()); toast("Copied"); } catch { $("#sheet textarea").select(); toast("Select and copy the text"); } }
+});
+document.addEventListener("input", e => { if (e.target.id === "note" && S.open) { setMe(S.open, { note: e.target.value }); } });
+document.addEventListener("change", e => { const k = e.target.dataset.plan; if (k) { const d = store.get("plan", {}); d[k] = e.target.checked; store.set("plan", d); } });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#sheet").hidden) closeSheet(); });
+
+/* ---------- load ---------- */
+fetch("listings.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+  S.homes = d.homes; S.updated = d.updated;
+  const ids = S.homes.map(h => h.id);
+  if (S.seen) S.newIds = ids.filter(id => !S.seen.includes(id));
+  store.set("seen", ids);
+  const dec = S.homes.filter(h => h.when === "dec").length;
+  $("#lede").textContent = `${dec} two-bedroom homes in Bloemfontein are advertised for 1 December, cheapest first. Tap the heart on any you like, open one to leave a note, then send me your picks.`;
+  render();
+}).catch(() => { $("#main").innerHTML = `<div class="empty" style="margin-top:20px"><b>Couldn't load the homes.</b><p class="muted">Check your connection and pull down to refresh.</p></div>`; });
+})();
+</script>
+</body>
+</html>
