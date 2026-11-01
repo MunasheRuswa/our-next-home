@@ -811,7 +811,7 @@ function picksText() {
 }
 function agentText(h) {
   const first = h.agent ? " " + h.agent.split(/\s+/)[0] : "";
-  return `Hi${first}, I'm interested in the 2-bedroom at ${R(h.rent).replace(/ /g, " ")} a month${h.ref ? ` (${h.source || "advert"} ref ${h.ref})` : ""}. We're a small family, two adults and a young child, moving on 1 December. Is it still available from then, and could we view it this week? We can apply the same day with IDs, payslips and bank statements ready.`;
+  return `Hi${first}, I'm interested in the 2-bedroom at ${R(h.rent).replace(/ /g, " ")} a month${h.ref ? ` (${h.source || "advert"} ref ${h.ref})` : ""}. Is it still available, and when could we view it?`;
 }
 async function copy(text, ok) {
   try { await navigator.clipboard.writeText(text); toast(ok); }

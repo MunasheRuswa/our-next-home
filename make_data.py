@@ -33,7 +33,7 @@ for path in glob.glob(os.path.join(src, "*.json")):
     agent = next((t.split(":", 1)[1].strip() for t in facts if t.startswith("Agent:")), None)
     shown_facts = [re.sub(r"^Pets:\s*", "", t) for t in facts if not t.startswith("Agent:")]
     security = [re.sub(r",?\s*in the advert'?s words", "", s, flags=re.I).strip() for s in (d.get("security") or [])]
-    unknowns = [u for u in (d.get("unknowns") or []) if "old site" not in u.lower()]
+    unknowns = [u for u in (d.get("unknowns") or []) if "old site" not in u.lower() and "existing bains lodge tenant" not in u.lower()]
 
     typ = (d.get("type") or "").strip()
     title = d.get("title") or ""
