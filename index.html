@@ -144,7 +144,14 @@ main{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 .badge.goldline{background:rgba(255,255,255,.94);color:#6A4700;box-shadow:inset 0 0 0 1.5px var(--gold)}
 .badge.new{background:var(--blue);color:#fff}
 .badge .ic svg{width:13px;height:13px;fill:currentColor;stroke:none}
-.illus{position:absolute;left:10px;bottom:8px;font-size:.7rem;font-weight:700;color:#fff;background:rgba(10,24,40,.55);border-radius:6px;padding:1px 7px}
+.illus{position:absolute;left:10px;bottom:10px;font-size:.72rem;font-weight:700;color:#fff;background:rgba(10,24,40,.6);border-radius:6px;padding:2px 7px;display:inline-flex;align-items:center;gap:5px}
+.illus .ic svg{width:13px;height:13px}
+.media .cover{position:absolute;inset:0;z-index:1}
+.media .badges,.media .illus{z-index:2;pointer-events:none}
+.ph-btn{position:absolute;right:10px;bottom:8px;z-index:3;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.96);color:#0E2A47;font-size:.84rem;font-weight:800;border-radius:999px;padding:0 13px 0 11px;min-height:36px;text-decoration:none;box-shadow:0 2px 10px rgba(14,42,71,.28)}
+.ph-btn .ic svg{width:17px;height:17px}
+img.own{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.heart{z-index:4}
 .heart{position:absolute;top:8px;right:8px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 2px 8px rgba(14,42,71,.22)}
 .heart svg{width:22px;height:22px;fill:none;stroke:var(--rose);stroke-width:2}
 .heart[aria-pressed=true] svg{fill:var(--rose)}
@@ -197,7 +204,31 @@ main{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 .gallery{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:var(--sky2);margin-top:6px;box-shadow:var(--shadow)}
 @media (min-width:600px){.gallery{aspect-ratio:16/9}}@media (min-width:980px){.gallery{aspect-ratio:21/9}}
 .gallery svg.art{position:absolute;inset:0;width:100%;height:100%}
-.gallery .over{position:absolute;left:12px;bottom:12px}
+.gallery .over{position:absolute;left:12px;bottom:12px;z-index:3}
+.slides{position:absolute;inset:0;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.slides::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;height:100%;position:relative;scroll-snap-align:start;border:0;padding:0;margin:0;background:var(--sky2)}
+button.slide{cursor:zoom-in}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gallery .badges,.gallery .cap{z-index:2;pointer-events:none}
+.gallery .cap.count{top:auto;bottom:18px;right:12px;font-size:.84rem;padding:4px 11px;border-radius:999px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px}
+.thumbs button{position:relative;aspect-ratio:1;border:0;padding:0;border-radius:10px;overflow:hidden;background:var(--grey-soft);cursor:zoom-in}
+.thumbs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.row2{display:flex;flex-wrap:wrap;gap:8px}
+.row2 .btn{flex:1 1 160px;cursor:pointer}
+.row2 label:focus-within{outline:3px solid var(--blue);outline-offset:2px}
+.panel .hint{color:var(--muted);font-size:.94rem}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(4,10,18,.96);color:#fff;display:grid;grid-template-rows:auto minmax(0,1fr);padding:calc(10px + env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) calc(14px + env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+.lbbar{display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:700;padding-bottom:10px}
+.lbact{display:flex;gap:8px}
+.lb button{background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:999px;min-width:44px;min-height:44px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-weight:800}
+.lb button.warn{background:#C53030}
+.lb .ic svg{width:20px;height:20px}
+.stage{position:relative;display:grid;place-items:center;min-height:0;overflow:hidden}
+.stage img{max-width:100%;max-height:calc(100vh - 130px);max-height:calc(100dvh - 130px);object-fit:contain;display:block;border-radius:6px}
+.stage .nav{position:absolute;top:50%;transform:translateY(-50%)}
+.stage .prev{left:4px}.stage .next{right:4px}
 .gallery .cap{position:absolute;right:12px;top:12px;font-size:.74rem;font-weight:700;color:#fff;background:rgba(10,24,40,.55);border-radius:7px;padding:2px 8px}
 .gallery .photos{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0E2A47;font-weight:800;font-size:.92rem;border-radius:999px;padding:9px 16px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);min-height:44px}
 .gallery .photos .ic svg{width:17px;height:17px}
@@ -316,6 +347,7 @@ footer.foot{margin-top:34px;color:var(--muted);font-size:.84rem;max-width:70ch}
   <a href="#saved" data-nav="saved"><span class="ic" data-i="heart"></span>Saved<span class="ct" data-count hidden></span></a>
   <a href="#plan" data-nav="plan"><span class="ic" data-i="list"></span>Plan</a>
 </nav>
+<div id="lb" class="lb" hidden role="dialog" aria-modal="true" aria-label="Your photos"></div>
 <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
 <script>
@@ -354,7 +386,11 @@ const I = {
   ask: '<circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.8M12 17h.01"/>',
   copy: '<rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/>',
   send: '<path d="M21 3L10.5 13.5M21 3l-6.8 18-3.7-7.5L3 9.8z"/>',
-  star: '<path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/>'
+  star: '<path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/>',
+  camera: '<path d="M4 8h3l1.6-2.4A1.5 1.5 0 0 1 9.8 5h4.4a1.5 1.5 0 0 1 1.2.6L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/>',
+  share: '<path d="M12 3v12M7.5 7.5L12 3l4.5 4.5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>',
+  trash: '<path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>',
+  close: '<path d="M6 6l12 12M18 6L6 18"/>'
 };
 const ic = n => `<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">${I[n]}</svg></span>`;
 $$("[data-i]").forEach(el => el.outerHTML = ic(el.dataset.i).replace('class="ic"', `class="${el.className}"`));
@@ -482,6 +518,67 @@ function art(h) {
   </svg>`;
 }
 
+/* ---------- your own photos: shrunk on the phone and kept in its browser storage, never uploaded ---------- */
+const PH = {
+  db: null, cache: new Map(),
+  open() {
+    if (this.db) return Promise.resolve(this.db);
+    return new Promise((res, rej) => {
+      let r; try { r = indexedDB.open("onh-photos", 1); } catch (e) { rej(e); return; }
+      r.onupgradeneeded = () => { const st = r.result.createObjectStore("photos", { keyPath: "id", autoIncrement: true }); st.createIndex("home", "home"); };
+      r.onsuccess = () => { this.db = r.result; res(this.db); };
+      r.onerror = () => rej(r.error);
+    });
+  },
+  async loadAll() {
+    try {
+      const db = await this.open();
+      const rows = await new Promise((res, rej) => { const q = db.transaction("photos").objectStore("photos").getAll(); q.onsuccess = () => res(q.result || []); q.onerror = () => rej(q.error); });
+      rows.sort((a, b) => a.added - b.added).forEach(r => this.keep(r.home, r.id, new Blob([r.buf], { type: r.type || "image/jpeg" })));
+    } catch {}
+  },
+  keep(home, id, blob) { if (!this.cache.has(home)) this.cache.set(home, []); this.cache.get(home).push({ id, blob, url: URL.createObjectURL(blob) }); },
+  list(home) { return this.cache.get(home) || []; },
+  async add(home, files) {
+    try { await this.open(); } catch { toast("Photos can't be saved in this browser. Open the link in Chrome or Safari."); return 0; }
+    let n = 0, failed = 0;
+    for (const f of files) {
+      try {
+        const { blob, w, h } = await shrink(f);
+        const buf = await new Response(blob).arrayBuffer();
+        const id = await new Promise((res, rej) => {
+          const tx = this.db.transaction("photos", "readwrite"); let key;
+          const q = tx.objectStore("photos").add({ home, type: "image/jpeg", buf, w, h, added: Date.now() });
+          q.onsuccess = () => key = q.result; tx.oncomplete = () => res(key); tx.onerror = () => rej(tx.error); tx.onabort = () => rej(tx.error);
+        });
+        this.keep(home, id, new Blob([buf], { type: "image/jpeg" })); n++;
+      } catch { failed++; }
+    }
+    if (failed) toast(failed === files.length ? "That photo couldn't be added. Try a JPEG or a screenshot." : `${failed} of the photos couldn't be added.`);
+    if (n && navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+    return n;
+  },
+  async remove(home, id) {
+    await this.open();
+    await new Promise((res, rej) => { const tx = this.db.transaction("photos", "readwrite"); tx.objectStore("photos").delete(id); tx.oncomplete = res; tx.onerror = () => rej(tx.error); });
+    const list = this.list(home), i = list.findIndex(p => p.id === id);
+    if (i >= 0) { URL.revokeObjectURL(list[i].url); list.splice(i, 1); }
+  }
+};
+async function shrink(file) {
+  const src = URL.createObjectURL(file);
+  try {
+    const img = new Image(); img.src = src; await img.decode();
+    const sc = Math.min(1, 1600 / Math.max(img.naturalWidth, img.naturalHeight));
+    const w = Math.round(img.naturalWidth * sc), h = Math.round(img.naturalHeight * sc);
+    const c = document.createElement("canvas"); c.width = w; c.height = h;
+    c.getContext("2d").drawImage(img, 0, 0, w, h);
+    const blob = await new Promise((res, rej) => c.toBlob(b => b ? res(b) : rej(new Error("encode")), "image/jpeg", .82));
+    return { blob, w, h };
+  } finally { URL.revokeObjectURL(src); }
+}
+const pic = h => { const own = PH.list(h.id); return own.length ? `<img class="own" src="${own[0].url}" alt="">` : art(h); };
+
 /* ---------- state ---------- */
 const S = {
   homes: [], checked: "", byId: new Map(), route: { name: "homes" },
@@ -539,13 +636,15 @@ const order = list => list.slice().sort(S.f.sort === "space"
 
 /* ---------- views ---------- */
 function card(h, feature) {
-  const m = mine(h.id), t = timing(h), ch = chips(h), isNew = S.newIds.includes(h.id);
+  const m = mine(h.id), t = timing(h), ch = chips(h), isNew = S.newIds.includes(h.id), own = PH.list(h.id);
   return `<article class="card${feature ? " feature" : ""}${m.v === "no" ? " dim" : ""}">
-    <a class="media" href="#home/${esc(h.id)}" aria-label="${esc(h.title)}, ${esc(R(h.rent))} a month">
-      ${art(h)}
+    <div class="media">
+      ${pic(h)}
+      <a class="cover" href="#home/${esc(h.id)}" aria-label="${esc(h.title)}, ${esc(R(h.rent))} a month"></a>
       <span class="badges">${bainsBadge(h)}${isNew ? `<span class="badge new">New</span>` : ""}<span class="badge ${t.cls}">${esc(t.short)}</span></span>
-      <span class="illus">Illustration</span>
-    </a>
+      ${own.length ? `<span class="illus">${ic("camera")}${own.length === 1 ? "Your photo" : `${own.length} of your photos`}</span>` : `<span class="illus">Illustration</span>`}
+      <a class="ph-btn" href="${esc(h.url)}" target="_blank" rel="noopener">${ic("camera")}Photos<span class="sr"> on ${esc(h.source || "the advert")}, opens a new tab</span></a>
+    </div>
     <button type="button" class="heart" data-heart="${esc(h.id)}" aria-pressed="${!!m.heart}" aria-label="${m.heart ? "Remove from saved" : "Save"}: ${esc(h.title)}"><svg viewBox="0 0 24 24" aria-hidden="true">${I.heart}</svg></button>
     <div class="info">
       <p class="price">${R(h.rent)}<small>per month</small></p>
@@ -585,7 +684,7 @@ function viewHomes() {
 function viewDetail(id) {
   const h = S.byId.get(id);
   if (!h) return `<nav class="crumbs"><a href="#homes">${ic("back")}All homes</a></nav><div class="empty" style="margin-top:12px"><b>This home is no longer on the list.</b><p>It may have been let. Go back to see the others.</p><a class="btn" href="#homes">See all homes</a></div>`;
-  const m = mine(id), t = timing(h);
+  const m = mine(id), t = timing(h), own = PH.list(id);
   const asks = [...h.unknowns];
   if (!t.dec && !asks.some(a => /1 December/i.test(a))) asks.unshift("Can the lease start on 1 December?");
   if (!asks.some(a => /child/i.test(a))) asks.push("Are children welcome?");
@@ -596,9 +695,10 @@ function viewDetail(id) {
     ...(h.utilities ? [["Utilities", h.utilities]] : []), ["Listing", `${h.source || ""}${h.ref ? ` ref ${h.ref}` : ""}`]
   ];
   return `<nav class="crumbs" aria-label="Breadcrumb"><a href="#homes">${ic("back")}All homes</a><span aria-hidden="true">/</span><span>${esc(h.suburb)}</span></nav>
-  <div class="gallery">${art(h)}
+  <div class="gallery">
+    <div class="slides" id="slides">${own.map((p, i) => `<button type="button" class="slide" data-lb="${i}" aria-label="Open your photo ${i + 1} of ${own.length}"><img src="${p.url}" alt=""></button>`).join("")}<div class="slide">${art(h)}</div></div>
     <span class="badges">${bainsBadge(h)}<span class="badge ${t.cls}">${esc(t.short)}</span></span>
-    <span class="cap">Illustration</span>
+    <span class="cap${own.length ? " count" : ""}" id="slidecap">${own.length ? `1 / ${own.length}` : "Illustration"}</span>
     <div class="over"><a class="photos" href="${esc(h.url)}" target="_blank" rel="noopener">See the real photos${ic("ext")}</a></div>
   </div>
   <div class="dgrid">
@@ -610,6 +710,13 @@ function viewDetail(id) {
         ${specs(h)}
       </div>
       ${h.areaNote ? `<p class="areanote">${esc(h.areaNote)}</p>` : ""}
+      <section class="panel" aria-labelledby="yp-h"><h2 id="yp-h">Your photos</h2>
+        ${own.length ? `<div class="thumbs">${own.map((p, i) => `<button type="button" data-lb="${i}" aria-label="Open your photo ${i + 1}"><img src="${p.url}" alt=""></button>`).join("")}</div>` : `<p class="hint">Take photos at the viewing and add them here. They're kept on this phone, and you can share them from here.</p>`}
+        <div class="row2">
+          <label class="btn${own.length ? " ghost" : ""}">${ic("camera")}${own.length ? "Add more photos" : "Add photos"}<input id="addph" class="sr" type="file" accept="image/*" multiple></label>
+          ${own.length ? `<button type="button" class="btn ghost" data-act="sharephotos">${ic("share")}Share photos</button>` : ""}
+        </div>
+      </section>
       <section class="panel" aria-labelledby="ov-h"><h2 id="ov-h">Overview</h2><dl class="ov">${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl></section>
       ${h.facts.length ? `<section class="panel" aria-labelledby="fa-h"><h2 id="fa-h">What the advert says</h2><ul class="ticks">${h.facts.map(x => `<li>${ic("check")}<span>${esc(x)}</span></li>`).join("")}</ul></section>` : ""}
       <section class="panel" aria-labelledby="as-h"><h2 id="as-h">Ask the agent</h2><ul class="asks">${asks.map(x => `<li>${ic("ask")}<span>${esc(x)}</span></li>`).join("")}</ul>
@@ -640,7 +747,7 @@ function viewSaved() {
     ["Your take", h => esc(VL[mine(h.id).v] || "")], ["Notes", h => esc(mine(h.id).note || "")]];
   return `<div class="pagehead"><h1>Saved homes</h1><p>${ps.length} saved. Your hearts and notes stay on this phone until you send them.</p></div>
     <div style="margin-top:14px"><button type="button" class="btn rose" data-act="send">${ic("send")}Send my picks</button></div>
-    <div class="rows">${ps.map(h => `<a class="srow" href="#home/${esc(h.id)}"><span class="thumb">${art(h)}</span><div><b>${esc(h.title)}</b><span>${esc(h.suburb)}${mine(h.id).v ? `, ${VL[mine(h.id).v].toLowerCase()}` : ""}</span></div><span class="price">${R(h.rent)}</span></a>`).join("")}</div>
+    <div class="rows">${ps.map(h => `<a class="srow" href="#home/${esc(h.id)}"><span class="thumb">${pic(h)}</span><div><b>${esc(h.title)}</b><span>${esc(h.suburb)}${mine(h.id).v ? `, ${VL[mine(h.id).v].toLowerCase()}` : ""}</span></div><span class="price">${R(h.rent)}</span></a>`).join("")}</div>
     ${ps.length > 1 ? `<section class="sec"><div class="sechead"><div><h2>Side by side</h2><p>Swipe the table sideways on a phone.</p></div></div><div class="tw"><table class="cmp"><thead><tr><th scope="col"><span class="sr">Detail</span></th>${ps.map(h => `<th scope="col">${esc(h.title)}</th>`).join("")}</tr></thead><tbody>${rows.map(([k, f]) => `<tr><th scope="row">${k}</th>${ps.map(h => `<td>${f(h)}</td>`).join("")}</tr>`).join("")}</tbody></table></div></section>` : ""}
     ${foot()}`;
 }
@@ -654,7 +761,7 @@ function viewPlan() {
   return `<div class="pagehead"><h1>The plan</h1><p>Tick things off as you go. Ticks are saved on this phone.</p></div>
     <div class="plan">${PLAN.map(([t, items]) => `<section><h2>${t}</h2><ul>${items.map(([k, x]) => `<li><label><input type="checkbox" data-plan="${k}" ${done[k] ? "checked" : ""}><span>${x}</span></label></li>`).join("")}</ul></section>`).join("")}</div>${foot()}`;
 }
-const foot = () => `<footer class="foot"><p>Adverts checked ${esc(S.checked)}. Rent, dates and availability are set by the agents and can change. Pictures are illustrations drawn from each advert; open the advert for the real photos.</p></footer>`;
+const foot = () => `<footer class="foot"><p>Adverts checked ${esc(S.checked)}. Rent, dates and availability are set by the agents and can change. Pictures are drawings based on each advert unless you've added your own; tap Photos on any home to see the agent's real photos.</p></footer>`;
 
 /* ---------- render ---------- */
 function syncControls() {
@@ -674,6 +781,14 @@ function render() {
   $("#savedlbl").textContent = n ? `Saved ${n}` : "Saved";
   $("#savedbtn").classList.toggle("has", n > 0);
   document.title = r.name === "detail" && S.byId.get(r.id) ? `${S.byId.get(r.id).title}, ${R(S.byId.get(r.id).rent)} | Our next home` : "Our next home";
+  const slides = $("#slides");
+  if (slides) {
+    const n2 = PH.list(r.id).length;
+    slides.addEventListener("scroll", () => {
+      const i = Math.round(slides.scrollLeft / Math.max(1, slides.clientWidth)), cap = $("#slidecap");
+      if (cap) cap.textContent = i < n2 ? `${i + 1} / ${n2}` : "Drawing";
+    }, { passive: true });
+  }
 }
 function route() {
   const hsh = location.hash.replace(/^#/, "");
@@ -682,6 +797,7 @@ function route() {
   if (hsh.startsWith("home/")) S.route = { name: "detail", id: decodeURIComponent(hsh.slice(5)) };
   else if (hsh === "saved" || hsh === "plan") S.route = { name: hsh };
   else S.route = { name: "homes" };
+  if (S.lb) { S.lb = null; drawLb(); }
   render();
   if (S.route.name === "homes" && prev !== "homes") requestAnimationFrame(() => scrollTo(0, S.homesScroll));
   else if (S.route.name !== "homes") scrollTo(0, 0);
@@ -701,6 +817,44 @@ async function copy(text, ok) {
   try { await navigator.clipboard.writeText(text); toast(ok); }
   catch { const ta = document.createElement("textarea"); ta.value = text; document.body.append(ta); ta.select(); try { document.execCommand("copy"); toast(ok); } catch { toast("Couldn't copy. Select the text and copy it."); } ta.remove(); }
 }
+async function sharePhotos(h, only) {
+  const ps = only ? [only] : PH.list(h.id);
+  const slug = h.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const files = ps.map((p, i) => new File([p.blob], `${slug}-${i + 1}.jpg`, { type: "image/jpeg" }));
+  if (navigator.canShare && navigator.canShare({ files })) {
+    try { await navigator.share({ files, title: h.title, text: `${h.title}, ${R(h.rent).replace(/ /g, " ")} a month\n${h.url}` }); }
+    catch (e) { if (!e || e.name !== "AbortError") toast("Couldn't share all of them. Try one photo at a time."); }
+  } else toast("This browser can't share photos. Press and hold a photo to save it instead.");
+}
+
+/* ---------- full-screen photo viewer ---------- */
+function drawLb() {
+  const lb = $("#lb");
+  const ps = S.lb ? PH.list(S.lb.id) : [];
+  if (!S.lb || !ps.length) { S.lb = null; lb.hidden = true; lb.innerHTML = ""; document.body.style.overflow = ""; return; }
+  S.lb.i = (S.lb.i + ps.length) % ps.length;
+  const p = ps[S.lb.i];
+  lb.innerHTML = `<div class="lbbar"><span>Photo ${S.lb.i + 1} of ${ps.length}</span><div class="lbact">
+      <button type="button" data-lbact="share">${ic("share")}<span class="sr">Share this photo</span></button>
+      <button type="button" data-lbact="del" class="${S.lb.del ? "warn" : ""}">${ic("trash")}${S.lb.del ? "Delete?" : `<span class="sr">Delete this photo</span>`}</button>
+      <button type="button" data-lbact="close">${ic("close")}<span class="sr">Close</span></button></div></div>
+    <div class="stage"><img src="${p.url}" alt="Your photo ${S.lb.i + 1} of ${ps.length}">
+      ${ps.length > 1 ? `<button type="button" class="nav prev" data-lbact="prev">${ic("back")}<span class="sr">Previous photo</span></button><button type="button" class="nav next" data-lbact="next">${ic("chev")}<span class="sr">Next photo</span></button>` : ""}</div>`;
+  lb.hidden = false; document.body.style.overflow = "hidden";
+}
+async function lbAction(a) {
+  if (!S.lb) return;
+  const h = S.byId.get(S.lb.id), ps = PH.list(S.lb.id), p = ps[S.lb.i];
+  if (a === "close") { S.lb = null; drawLb(); return; }
+  if (a === "prev" || a === "next") { S.lb.i += a === "next" ? 1 : -1; S.lb.del = false; drawLb(); return; }
+  if (a === "share" && h && p) { sharePhotos(h, p); return; }
+  if (a === "del" && p) {
+    if (!S.lb.del) { S.lb.del = true; drawLb(); return; }
+    try { await PH.remove(S.lb.id, p.id); toast("Photo deleted"); } catch { toast("Couldn't delete that photo. Try again."); }
+    S.lb.del = false; render(); drawLb();
+  }
+}
+
 async function send() {
   const text = picksText();
   if (navigator.share) { try { await navigator.share({ title: "My picks", text }); return; } catch (e) { if (e && e.name === "AbortError") return; } }
@@ -711,6 +865,8 @@ async function send() {
 /* ---------- events ---------- */
 document.addEventListener("click", e => {
   const t = e.target.closest("button,a"); if (!t) return;
+  if (t.dataset.lbact) { lbAction(t.dataset.lbact); return; }
+  if (t.dataset.lb != null && S.route.name === "detail") { S.lb = { id: S.route.id, i: Number(t.dataset.lb), del: false }; drawLb(); return; }
   if (t.dataset.heart) {
     const id = t.dataset.heart, on = !mine(id).heart; setMe(id, { heart: on });
     t.setAttribute("aria-pressed", String(on)); const n = saved().length;
@@ -726,19 +882,40 @@ document.addEventListener("click", e => {
   if (a === "save" && S.route.name === "detail") { const id = S.route.id, on = !mine(id).heart; setMe(id, { heart: on }); keepNote(); render(); toast(on ? "Saved" : "Removed from saved"); }
   else if (a === "send") send();
   else if (a === "copymsg") { const h = S.byId.get(S.route.id); if (h) copy(agentText(h), "Message copied. Paste it to the agent."); }
+  else if (a === "sharephotos") { const h = S.byId.get(S.route.id); if (h) sharePhotos(h); }
   else if (a === "anydate") { S.f.when = "any"; store.set("filters2", S.f); syncControls(); render(); }
   else if (a === "reset") { Object.assign(S.f, { area: "all", max: 0, garden: false, parking: false, house: false }); store.set("filters2", S.f); syncControls(); render(); }
 });
 function keepNote() { const ta = $("#note"); if (ta && S.route.name === "detail") setMe(S.route.id, { note: ta.value }); }
 document.addEventListener("input", e => { if (e.target.id === "note" && S.route.name === "detail") setMe(S.route.id, { note: e.target.value }); });
-document.addEventListener("change", e => {
+document.addEventListener("change", async e => {
+  if (e.target.id === "addph" && S.route.name === "detail") {
+    const files = [...(e.target.files || [])], id = S.route.id; e.target.value = "";
+    if (!files.length) return;
+    keepNote(); toast(files.length > 1 ? `Adding ${files.length} photos` : "Adding your photo");
+    const n = await PH.add(id, files);
+    if (n) { if (S.route.name === "detail" && S.route.id === id) render(); toast(n === 1 ? "Photo added" : `${n} photos added`); }
+    return;
+  }
   const k = e.target.dataset.f;
   if (k) { S.f[k] = k === "max" ? Number(e.target.value) : e.target.value; store.set("filters2", S.f); render(); return; }
   const p = e.target.dataset.plan; if (p) { const d = store.get("plan", {}); d[p] = e.target.checked; store.set("plan", d); }
 });
 
 /* ---------- load ---------- */
-fetch("listings.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+document.addEventListener("keydown", e => {
+  if (!S.lb) return;
+  if (e.key === "Escape") lbAction("close"); else if (e.key === "ArrowRight") lbAction("next"); else if (e.key === "ArrowLeft") lbAction("prev");
+});
+let touchX = null;
+$("#lb").addEventListener("touchstart", e => { touchX = e.touches[0].clientX; }, { passive: true });
+$("#lb").addEventListener("touchend", e => {
+  if (touchX == null || !S.lb) return;
+  const dx = e.changedTouches[0].clientX - touchX; touchX = null;
+  if (Math.abs(dx) > 50 && PH.list(S.lb.id).length > 1) lbAction(dx < 0 ? "next" : "prev");
+});
+
+Promise.all([fetch("listings.json", { cache: "no-cache" }).then(r => r.json()), PH.loadAll()]).then(([d]) => {
   S.homes = d.homes; S.checked = d.checked; S.homes.forEach(h => S.byId.set(h.id, h));
   const areas = [...new Set(S.homes.filter(h => !h.bains).map(h => h.suburb))].sort();
   $("#f-area").innerHTML = `<option value="all">All areas</option><option value="bains">Bains</option>${areas.map(a => `<option>${esc(a)}</option>`).join("")}`;
