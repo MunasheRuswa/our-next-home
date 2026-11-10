@@ -16,7 +16,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
 /* Portal layout: navy masthead with a search panel, Bains band first, then a cheapest-first grid.
    Listing pages carry a sticky action bar on phones. Every picture is an illustration drawn from its advert. */
@@ -308,10 +308,128 @@ footer.foot{margin-top:34px;color:var(--muted);font-size:.84rem;max-width:70ch}
 @media (min-width:860px){.toast{bottom:28px}}
 @media (prefers-reduced-motion:no-preference){.page-enter{animation:enter .22s ease-out both}@keyframes enter{from{opacity:.01;transform:translateY(8px)}to{opacity:1;transform:none}}}
 @media (min-width:1000px){.fgrid.two{grid-template-columns:1fr 1fr}.fgrid.two .card.feature{grid-template-columns:none;grid-template-rows:auto 1fr auto}.fgrid.two .card.feature .media{grid-row:auto;aspect-ratio:16/9;min-height:0}}
+
+/* ===== Free State sky edition =====
+   The masthead is the sky over Bloemfontein at the hour you open the page: dawn, day, dusk or night,
+   with Naval Hill and a street of homes on the horizon. Display face for headings and prices, quiet cards below. */
+:root{--fd:"Bricolage Grotesque","Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--ease:cubic-bezier(.2,.8,.2,1)}
+h1,h2,.price,.logo{font-family:var(--fd)}
+h1,h2{letter-spacing:-.028em}
+.price{letter-spacing:-.035em}
+.masthead{background:linear-gradient(180deg,var(--s1) 0%,var(--s2) 58%,var(--s3) 100%);isolation:isolate}
+.masthead.ph-day{--s1:#0A3777;--s2:#2A76CC;--s3:#A9D3F5;--orb:#FFE08A;--glow:rgba(255,224,138,.38);--far:#3F73AE;--near:#0E2A47;--win:#BFDCF7;--cl:.38}
+.masthead.ph-dawn{--s1:#1A2357;--s2:#874C85;--s3:#FFB58A;--orb:#FFDDA8;--glow:rgba(255,196,140,.5);--far:#5B4175;--near:#131A3B;--win:#FFD98A;--cl:.4}
+.masthead.ph-dusk{--s1:#151B48;--s2:#793E77;--s3:#F59A5B;--orb:#FFC27A;--glow:rgba(255,160,90,.5);--far:#4B3261;--near:#0E1431;--win:#FFD98A;--cl:.35}
+.masthead.ph-night{--s1:#040A1A;--s2:#0D1F44;--s3:#26406F;--orb:#F4EFD8;--glow:rgba(244,239,216,.22);--far:#12244A;--near:#050C1C;--win:#FFD466;--cl:.1}
+.sky{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.masthead.slim .sky{display:none}
+.masthead.slim{background:var(--s1)}
+.sky .orb{position:absolute;right:7%;top:66px;width:46px;height:46px;border-radius:50%;background:var(--orb);box-shadow:0 0 0 12px var(--glow),0 0 70px 34px var(--glow)}
+.ph-dawn .orb,.ph-dusk .orb{top:auto;bottom:96px;right:14%}
+.ph-night .orb{box-shadow:inset -9px -4px 0 rgba(20,34,70,.28),0 0 50px 16px var(--glow)}
+.sky .star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.85}
+.sky .cloud{position:absolute;left:0;width:130px;height:26px;border-radius:99px;background:#fff;opacity:var(--cl);transform:translateX(var(--x))}
+.sky .cloud::before{content:"";position:absolute;left:26px;top:-14px;width:58px;height:34px;border-radius:99px;background:#fff}
+.sky .land{position:absolute;left:0;right:0;bottom:-1px;height:150px;width:100%;display:block}
+@media (max-width:600px){.sky .land{height:108px}.sky .orb{width:38px;height:38px;top:70px}.ph-dawn .orb,.ph-dusk .orb{bottom:70px}}
+@media (prefers-reduced-motion:no-preference){
+  .sky .cloud{animation:drift var(--t,110s) linear infinite;animation-delay:var(--dl,0s)}
+  @keyframes drift{from{transform:translateX(-160px)}to{transform:translateX(100vw)}}
+  .sky .star{animation:tw 3.6s ease-in-out infinite}
+  @keyframes tw{50%{opacity:.2}}
+  .count .pulse{animation:pulse 2s ease-out infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.55)}100%{box-shadow:0 0 0 9px rgba(255,255,255,0)}}
+}
+.topbar,.hero{position:relative;z-index:1}
+.hero{padding-bottom:176px}
+@media (max-width:600px){.hero{padding-bottom:128px}}
+.count{display:inline-flex;align-items:center;gap:9px;margin-top:14px;padding:6px 14px 6px 12px;border-radius:999px;background:rgba(6,16,36,.34);border:1px solid rgba(255,255,255,.26);font-size:.9rem;font-weight:700;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.count b{font-family:var(--fd);font-size:1.05rem}
+.count .pulse{width:8px;height:8px;border-radius:50%;background:var(--orb)}
+.hero h1{font-size:clamp(2.1rem,8.4vw,4rem);font-weight:800;line-height:1;max-width:14ch;margin-top:14px;text-shadow:0 2px 24px rgba(4,12,30,.35)}
+.hero h1 em{font-style:normal;color:var(--orb);white-space:nowrap}
+.hero .sub{color:#fff;opacity:.92;font-weight:600;margin-top:14px;text-shadow:0 1px 12px rgba(4,12,30,.45)}
+.search{border-radius:18px;box-shadow:0 18px 44px -16px rgba(4,12,30,.6)}
+.must{background:rgba(6,16,36,.34);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.must[aria-pressed=true]{color:#0E2A47}
+.bains{margin-top:22px;border-radius:24px}
+.sechead h2{font-size:1.7rem;font-weight:800}
+
+/* cards */
+.card{border-radius:20px;transition:transform .28s var(--ease),box-shadow .28s var(--ease)}
+.media svg.art{transition:transform .7s var(--ease)}
+@media (hover:hover){.card:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(14,42,71,.06),0 26px 44px -22px rgba(14,42,71,.5)}.card:hover .media svg.art{transform:scale(1.045)}}
+.price{font-size:1.75rem}
+.card.feature .price{font-size:2rem}
+.perm{color:var(--muted);font-weight:700}
+.badge.pick{background:#0E2A47;color:#fff}
+.badge.pick .ic svg{fill:#F5BE4B}
+.badge.cut{background:var(--rose);color:var(--blue-ink)}
+.heart{transition:transform .15s var(--ease)}
+.heart:active{transform:scale(.86)}
+@media (prefers-reduced-motion:no-preference){
+  .heart.pop svg{animation:pop .5s var(--ease)}
+  @keyframes pop{0%{transform:scale(.5)}55%{transform:scale(1.35)}100%{transform:scale(1)}}
+  .fresh>.card{animation:rise .55s var(--ease) both}
+  .fresh>.card:nth-child(2){animation-delay:.05s}.fresh>.card:nth-child(3){animation-delay:.1s}.fresh>.card:nth-child(4){animation-delay:.15s}.fresh>.card:nth-child(5){animation-delay:.2s}.fresh>.card:nth-child(6){animation-delay:.25s}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+}
+
+/* shortlist rail */
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:16px;padding:4px 16px 16px;margin:0 -16px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail>.card{flex:0 0 min(84%,330px);scroll-snap-align:start}
+@media (hover:hover) and (min-width:860px){.rail{scrollbar-width:thin}.rail::-webkit-scrollbar{display:block;height:8px}.rail::-webkit-scrollbar-thumb{background:var(--line2);border-radius:99px}}
+
+/* quick sort */
+.qs{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;margin-top:24px;padding:16px 18px;border-radius:22px;background:linear-gradient(120deg,#0E2A47,#1D4E86);color:#fff;text-decoration:none;box-shadow:var(--shadow)}
+.qs b{font-family:var(--fd);font-size:1.25rem;display:block;letter-spacing:-.02em}
+.qs small{color:#C5D5EA;font-size:.93rem;display:block}
+.qs .fan{position:relative;width:46px;height:54px;flex:none}
+.qs .fan i{position:absolute;inset:6px 8px;border-radius:8px;background:#fff;opacity:.3;transform:rotate(-13deg)}
+.qs .fan i+i{opacity:.6;transform:rotate(-2deg)}
+.qs .fan i+i+i{opacity:1;transform:rotate(10deg);background:#FF7AA1}
+.bar{height:8px;border-radius:99px;background:rgba(255,255,255,.2);overflow:hidden}
+.bar i{display:block;height:100%;background:#F5BE4B;border-radius:99px;transition:width .4s var(--ease)}
+.bar.l{background:var(--line);margin-top:8px;max-width:420px}
+.bar.l i{background:var(--green)}
+.deck{position:relative;max-width:420px;margin:20px auto 0}
+.deck-card{position:absolute;inset:0;transform:translateY(calc(var(--d)*11px)) scale(calc(1 - var(--d)*.045));transition:transform .26s var(--ease),opacity .26s;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.deck-card.top{position:relative;cursor:grab}
+.deck-card:not(.top) .card{height:100%}
+.deck-card a,.deck-card svg,.deck-card img{-webkit-user-drag:none}
+.deck-card.dragging{transition:none;cursor:grabbing}
+.deck-card.fly-love{transform:translateX(125%) rotate(18deg)!important;opacity:0}
+.deck-card.fly-no{transform:translateX(-125%) rotate(-18deg)!important;opacity:0}
+.deck-card.fly-maybe{transform:translateY(-55%) scale(.9)!important;opacity:0}
+.stamp{position:absolute;top:22px;z-index:6;font:800 1.25rem var(--fd);padding:4px 12px;border-radius:10px;border:3px solid;background:rgba(255,255,255,.94);opacity:0;transition:opacity .12s;pointer-events:none}
+.stamp.love{left:16px;color:#13804F;transform:rotate(-9deg)}
+.stamp.no{right:16px;color:#5E6E82;transform:rotate(9deg)}
+[data-hint=love] .stamp.love,[data-hint=no] .stamp.no{opacity:1}
+.deckbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:420px;margin:30px auto 0}
+.deckbtns button{display:grid;justify-items:center;gap:4px;padding:12px 6px;border-radius:16px;border:1px solid var(--line2);background:var(--card);font-weight:800;font-size:.9rem;min-height:66px}
+.deckbtns .ic svg{width:24px;height:24px}
+.deckbtns [data-deck=maybe]{color:var(--amber)}
+.deckbtns [data-deck=love]{background:var(--rose);border-color:var(--rose);color:var(--blue-ink)}
+.deckbtns [data-deck=love] .ic svg{fill:currentColor}
+.deck .media{aspect-ratio:16/8.5}
+.deck .agency,.deck .bnote{display:none}
+.deckfoot{display:flex;justify-content:center;margin-top:14px}
+
+/* countdown and money */
+.cd{display:grid;gap:16px;margin-top:16px;padding:22px;border-radius:22px;background:linear-gradient(120deg,#0E2A47,#1D4E86);color:#fff}
+@media (min-width:700px){.cd{grid-template-columns:auto minmax(0,1fr);align-items:center;gap:32px}}
+.cd .n{font-family:var(--fd);font-size:4.6rem;font-weight:800;line-height:.86;letter-spacing:-.05em}
+.cd .n small{display:block;font:700 .95rem/1.3 var(--f);letter-spacing:0;color:#C5D5EA;margin-top:10px}
+.cd .txt{display:grid;gap:10px}
+.cd .txt p{color:#C5D5EA;font-size:.95rem;max-width:62ch}
+.ov .tot{font-weight:800;color:var(--ink);font-size:1.02rem}
+.ov dd{max-width:26ch;justify-self:end}
 </style>
 </head>
 <body>
-<header class="masthead">
+<header class="masthead ph-day" id="mast">
+  <div class="sky" id="sky" aria-hidden="true"></div>
   <div class="wrap topbar">
     <a class="logo" href="#homes" aria-label="Our next home, all homes">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#FFFFFF"/><path d="M7 15.5L16 8l9 7.5V25H7z" fill="#0E2A47"/><path d="M16 22.6s-4-2.5-4-5.6a2.3 2.3 0 0 1 4-1.5 2.3 2.3 0 0 1 4 1.5c0 3.1-4 5.6-4 5.6z" fill="#D33A6A"/></svg>
@@ -319,14 +437,16 @@ footer.foot{margin-top:34px;color:var(--muted);font-size:.84rem;max-width:70ch}
     </a>
     <nav class="toptabs" aria-label="Sections">
       <a href="#homes" data-nav="homes">Homes</a>
+      <a href="#sort" data-nav="sort">Quick sort</a>
       <a href="#saved" data-nav="saved">Saved <span class="ct" data-count hidden></span></a>
       <a href="#plan" data-nav="plan">Plan</a>
     </nav>
     <a class="savedbtn" href="#saved" id="savedbtn"><span class="ic" data-i="heart"></span><span id="savedlbl">Saved</span></a>
   </div>
   <div class="wrap hero" id="hero">
-    <h1>Two-bedroom homes to rent in Bloemfontein</h1>
-    <p class="sub">Bains first, then every other home from the cheapest up.</p>
+    <p class="count" id="count" hidden><span class="pulse"></span><span><b id="days"></b> to 1 December</span></p>
+    <h1>Two bedrooms. Bloemfontein. <em>1 December.</em></h1>
+    <p class="sub" id="herosub">Bains first, then every other home from the cheapest up.</p>
     <form class="search" role="search" aria-label="Filter homes" onsubmit="return false">
       <div class="field"><label for="f-area">Area</label><select id="f-area" data-f="area"></select><span class="chev ic" data-i="down"></span></div>
       <div class="field"><label for="f-max">Max rent</label><select id="f-max" data-f="max"></select><span class="chev ic" data-i="down"></span></div>
@@ -344,6 +464,7 @@ footer.foot{margin-top:34px;color:var(--muted);font-size:.84rem;max-width:70ch}
 
 <nav class="tabbar" id="tabbar" aria-label="Sections">
   <a href="#homes" data-nav="homes"><span class="ic" data-i="home"></span>Homes</a>
+  <a href="#sort" data-nav="sort"><span class="ic" data-i="deck"></span>Quick sort</a>
   <a href="#saved" data-nav="saved"><span class="ic" data-i="heart"></span>Saved<span class="ct" data-count hidden></span></a>
   <a href="#plan" data-nav="plan"><span class="ic" data-i="list"></span>Plan</a>
 </nav>
@@ -390,10 +511,49 @@ const I = {
   camera: '<path d="M4 8h3l1.6-2.4A1.5 1.5 0 0 1 9.8 5h4.4a1.5 1.5 0 0 1 1.2.6L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/>',
   share: '<path d="M12 3v12M7.5 7.5L12 3l4.5 4.5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>',
   trash: '<path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>',
-  close: '<path d="M6 6l12 12M18 6L6 18"/>'
+  close: '<path d="M6 6l12 12M18 6L6 18"/>',
+  deck: '<rect x="7.5" y="5" width="12" height="15" rx="2.2" transform="rotate(8 13.5 12.5)"/><path d="M5.2 7.2l-1 10.6a2 2 0 0 0 1.8 2.2l3 .3"/>'
 };
 const ic = n => `<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">${I[n]}</svg></span>`;
 $$("[data-i]").forEach(el => el.outerHTML = ic(el.dataset.i).replace('class="ic"', `class="${el.className}"`));
+
+
+/* ---------- the sky: follows the clock on this phone ---------- */
+const MOVE = new Date(2026, 11, 1);
+function scene() {
+  const now = new Date(), hr = now.getHours() + now.getMinutes() / 60;
+  const ph = hr >= 5 && hr < 7 ? "dawn" : hr >= 7 && hr < 16.5 ? "day" : hr >= 16.5 && hr < 19 ? "dusk" : "night";
+  const m = $("#mast"); m.classList.remove("ph-day"); m.classList.add("ph-" + ph);
+  const tc = $('meta[name="theme-color"]'); if (tc) tc.content = { dawn: "#1A2357", day: "#0A3777", dusk: "#151B48", night: "#040A1A" }[ph];
+  let seed = 11; const rnd = () => (seed = seed * 16807 % 2147483647) / 2147483647;
+  let h = "";
+  if (ph !== "day") for (let i = 0, n = ph === "night" ? 44 : 12; i < n; i++) h += `<i class="star" style="left:${(rnd() * 100).toFixed(1)}%;top:${(rnd() * 62).toFixed(1)}%;animation-delay:-${(rnd() * 3.6).toFixed(1)}s"></i>`;
+  h += `<i class="orb"></i>`;
+  [["top:58px", 52, 150, -75], ["bottom:168px", 8, 120, -10], ["bottom:214px", 70, 170, -120]].forEach(([pos, x, t, dl]) => h += `<i class="cloud" style="${pos};--x:${x}vw;--t:${t}s;--dl:${dl}s"></i>`);
+  // horizon: Naval Hill behind a street of homes
+  let hs = "", ws = "", x = -12;
+  while (x < 1212) {
+    const kind = rnd(), w = kind < .14 ? 56 : 36 + Math.floor(rnd() * 40), hh = kind < .14 ? 58 + Math.floor(rnd() * 14) : 24 + Math.floor(rnd() * 22), y = 128 - hh;
+    if (kind < .14) { hs += `<rect x="${x}" y="${y}" width="${w}" height="${hh}"/>`; for (let fy = y + 8; fy < 116; fy += 17) for (let wx = x + 8; wx < x + w - 10; wx += 15) if (rnd() > .25) ws += `<rect x="${wx}" y="${fy}" width="7" height="8" rx="1"/>`; }
+    else {
+      hs += kind < .7 ? `<path d="M${x} 128V${y}L${x + w / 2} ${y - 13 - Math.floor(rnd() * 8)}L${x + w} ${y}V128Z"/>` : `<rect x="${x}" y="${y}" width="${w}" height="${hh}"/><rect x="${x - 3}" y="${y - 4}" width="${w + 6}" height="5"/>`;
+      if (rnd() > .2) ws += `<rect x="${x + 8}" y="${y + 8}" width="8" height="9" rx="1"/>`;
+      if (w > 52 && rnd() > .35) ws += `<rect x="${x + w - 17}" y="${y + 8}" width="8" height="9" rx="1"/>`;
+    }
+    x += w + 2;
+    if (rnd() > .45) { const r = 9 + Math.floor(rnd() * 7); hs += `<circle cx="${x + r}" cy="${126 - r}" r="${r}"/><rect x="${x + r - 1.5}" y="${126 - r}" width="3" height="${r + 2}"/>`; x += r * 2 + 2; }
+    x += Math.floor(rnd() * 10);
+  }
+  h += `<svg class="land" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMax slice">
+    <path d="M0 128V112C120 104 220 110 330 116C400 112 440 84 482 76L706 72C752 75 792 108 880 116C980 108 1100 100 1200 110V128Z" style="fill:var(--far)"/>
+    <g style="fill:var(--near)">${hs}<rect y="126" width="1200" height="24"/></g>
+    <g style="fill:var(--win)" opacity="${ph === "day" ? .5 : 1}">${ws}</g></svg>`;
+  $("#sky").innerHTML = h;
+  const n = Math.round((MOVE - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 864e5);
+  if (n > 0) { $("#days").textContent = `${n} day${n === 1 ? "" : "s"}`; $("#count").hidden = false; }
+  return n;
+}
+const DAYS = scene();
 
 /* ---------- illustration: each home drawn from what its advert says ---------- */
 let ART = 0;
@@ -583,7 +743,7 @@ const pic = h => { const own = PH.list(h.id); return own.length ? `<img class="o
 const S = {
   homes: [], checked: "", byId: new Map(), route: { name: "homes" },
   f: Object.assign({ area: "all", max: 0, when: "dec", garden: false, parking: false, house: false, sort: "cheap" }, store.get("filters2", {})),
-  me: store.get("me", {}), newIds: [], homesScroll: 0
+  me: store.get("me", {}), newIds: [], homesScroll: 0, undo: [], fresh: true
 };
 const mine = id => S.me[id] || {};
 const setMe = (id, patch) => { S.me[id] = Object.assign({}, mine(id), patch); store.set("me", S.me); };
@@ -614,8 +774,11 @@ const specs = h => `<ul class="specs">
   <li title="Bedrooms">${ic("bed")}${esc(h.beds ?? "?")}<span class="sr"> bedrooms</span></li>
   <li title="Bathrooms">${ic("bath")}${esc(h.baths ?? "?")}<span class="sr"> bathrooms</span></li>
   ${h.parking ? `<li title="Parking">${ic("car")}${esc(shortPark(h.parking))}</li>` : ""}
-  ${h.size ? `<li title="Floor size">${ic("size")}${esc(h.size)}&nbsp;m²</li>` : ""}
+  ${h.size ? `<li title="Floor size and rent per square metre">${ic("size")}${esc(h.size)}&nbsp;m²<span class="perm">&nbsp;· ${R(perM(h))}/m²</span></li>` : ""}
 </ul>`;
+const perM = h => h.size ? Math.round(h.rent / h.size) : null;
+const pickBadge = h => h.bains ? "" : h.pick === "short" ? `<span class="badge pick">${ic("star")}Shortlist</span>` : h.pick ? `<span class="badge pick">Budget pick</span>` : "";
+const rank = h => h.bains === "lodge" ? 0 : h.bains ? 1 : h.pick === "short" ? 2 : h.pick ? 3 : 4;
 const bainsBadge = h => h.bains === "lodge" ? `<span class="badge gold">${ic("star")}Bains Lodge</span>` : h.bains ? `<span class="badge goldline">Bainsvlei</span>` : "";
 
 /* ---------- filters ---------- */
@@ -632,6 +795,7 @@ function passes(h, ignoreWhen) {
 }
 const order = list => list.slice().sort(S.f.sort === "space"
   ? (a, b) => (b.size || 0) - (a.size || 0) || a.rent - b.rent
+  : S.f.sort === "value" ? (a, b) => (perM(a) || 1e9) - (perM(b) || 1e9) || a.rent - b.rent
   : (a, b) => a.rent - b.rent || a.title.localeCompare(b.title));
 
 /* ---------- views ---------- */
@@ -641,7 +805,7 @@ function card(h, feature) {
     <div class="media">
       ${pic(h)}
       <a class="cover" href="#home/${esc(h.id)}" aria-label="${esc(h.title)}, ${esc(R(h.rent))} a month"></a>
-      <span class="badges">${bainsBadge(h)}${isNew ? `<span class="badge new">New</span>` : ""}<span class="badge ${t.cls}">${esc(t.short)}</span></span>
+      <span class="badges">${bainsBadge(h)}${pickBadge(h)}${isNew ? `<span class="badge new">New</span>` : ""}${h.reduced ? `<span class="badge cut">Reduced</span>` : ""}<span class="badge ${t.cls}">${esc(t.short)}</span></span>
       ${own.length ? `<span class="illus">${ic("camera")}${own.length === 1 ? "Your photo" : `${own.length} of your photos`}</span>` : `<span class="illus">Illustration</span>`}
       <a class="ph-btn" href="${esc(h.url)}" target="_blank" rel="noopener">${ic("camera")}Photos<span class="sr"> on ${esc(h.source || "the advert")}, opens a new tab</span></a>
     </div>
@@ -670,12 +834,18 @@ function viewHomes() {
       <div class="fgrid${bains.length > 1 ? " two" : ""}">${bains.map(h => card(h, true)).join("")}</div>
     </section>`;
   if (newN) html += `<p class="notice"><span class="dot"></span>${newN} home${newN > 1 ? "s" : ""} added since your last visit, marked New.</p>`;
+  const picks = S.f.area === "bains" ? [] : S.homes.filter(h => h.pick && !h.bains && passes(h, true)).sort((a, b) => rank(a) - rank(b) || a.rent - b.rent);
+  if (picks.length > 1) html += `<section class="sec" aria-labelledby="ph">
+      <div class="sechead"><div><h2 id="ph">The shortlist</h2><p>${picks.length} homes that stood out when the adverts were checked. Swipe sideways to see them all.</p></div></div>
+      <div class="rail">${picks.map(h => card(h)).join("")}</div></section>`;
+  const todo = deckQueue().length;
+  if (todo) html += `<a class="qs" href="#sort"><span class="fan" aria-hidden="true"><i></i><i></i><i></i></span><span><b>Quick sort</b><small>${todo} home${todo === 1 ? "" : "s"} to go through, one at a time. Love it, maybe, or not for us.</small></span>${ic("chev")}</a>`;
   if (S.f.area === "bains" && !bains.length) html += `<div class="empty main-first"><b>No Bains homes match these filters.</b><p>Raise the max rent or switch off a must-have.</p><button class="btn ghost" data-act="reset">Clear filters</button></div>`;
   if (S.f.area !== "bains") {
     html += `<section class="sec${bains.length ? "" : " main-first"}" aria-labelledby="rh">
-      <div class="sechead"><div><h2 id="rh">${S.f.when === "dec" ? "Ready for 1 December" : "All move-in dates"}</h2><p>${rest.length} home${rest.length === 1 ? "" : "s"}, ${S.f.sort === "space" ? "most space first" : "cheapest first"}</p></div>
-        <label class="sort">Sort<span class="wrapsel"><select data-f="sort" aria-label="Sort homes"><option value="cheap"${S.f.sort === "cheap" ? " selected" : ""}>Cheapest first</option><option value="space"${S.f.sort === "space" ? " selected" : ""}>Most space</option></select>${ic("down")}</span></label></div>
-      ${rest.length ? `<div class="grid">${rest.map(h => card(h)).join("")}</div>` : `<div class="empty"><b>No homes match these filters.</b><p>Raise the max rent or switch off a must-have.</p><button class="btn ghost" data-act="reset">Clear filters</button></div>`}
+      <div class="sechead"><div><h2 id="rh">${S.f.when === "dec" ? "Ready for 1 December" : "All move-in dates"}</h2><p>${rest.length} home${rest.length === 1 ? "" : "s"}, ${S.f.sort === "space" ? "most space first" : S.f.sort === "value" ? "lowest rent per m² first, homes with no size given last" : "cheapest first"}</p></div>
+        <label class="sort">Sort<span class="wrapsel"><select data-f="sort" aria-label="Sort homes"><option value="cheap"${S.f.sort === "cheap" ? " selected" : ""}>Cheapest first</option><option value="space"${S.f.sort === "space" ? " selected" : ""}>Most space</option><option value="value"${S.f.sort === "value" ? " selected" : ""}>Best rent per m²</option></select>${ic("down")}</span></label></div>
+      ${rest.length ? `<div class="grid${S.fresh ? " fresh" : ""}">${rest.map(h => card(h)).join("")}</div>` : `<div class="empty"><b>No homes match these filters.</b><p>Raise the max rent or switch off a must-have.</p><button class="btn ghost" data-act="reset">Clear filters</button></div>`}
       ${others ? `<div class="more"><p><b>${others} more homes</b> have other move-in dates. Some landlords may agree to 1 December if you ask.</p><button class="btn ghost" data-act="anydate">Show all dates</button></div>` : ""}
     </section>`;
   }
@@ -692,7 +862,8 @@ function viewDetail(id) {
     ["Rent", `${R(h.rent)} per month`], ["Deposit", h.deposit ? R(h.deposit) : "Not stated"], ["Move in", t.long],
     ["Type", h.type || "Not stated"], ["Floor size", h.size ? `${h.size} m²` : "Not stated"], ["Bedrooms", h.beds ?? "Not stated"], ["Bathrooms", h.baths ?? "Not stated"],
     ["Parking", h.parking || "Not stated"], ["Outdoor", h.outdoor || "Not stated"], ["Security", h.security.length ? h.security.join(", ") : "Not stated"],
-    ...(h.utilities ? [["Utilities", h.utilities]] : []), ["Listing", `${h.source || ""}${h.ref ? ` ref ${h.ref}` : ""}`]
+    ...(h.utilities ? [["Utilities", h.utilities]] : []), ["Listing", `${h.source || ""}${h.ref ? ` ref ${h.ref}` : ""}`],
+    ...(h.size ? [["Rent per m²", R(perM(h))]] : []), ...(h.checked ? [["Advert last checked", fd(h.checked, true)]] : [])
   ];
   return `<nav class="crumbs" aria-label="Breadcrumb"><a href="#homes">${ic("back")}All homes</a><span aria-hidden="true">/</span><span>${esc(h.suburb)}</span></nav>
   <div class="gallery">
@@ -728,6 +899,7 @@ function viewDetail(id) {
         <label for="note" class="sr">Your notes</label><textarea id="note" placeholder="What stood out? What worried you?">${esc(m.note || "")}</textarea>
         <button type="button" class="btn ${m.heart ? "ghost" : "rose"}" data-act="save">${m.heart ? "Saved. Tap to remove" : "Save this home"}</button>
       </section>
+      ${money(h)}
       <section class="panel" aria-labelledby="ag-h"><h2 id="ag-h">Listed by</h2>
         <div class="agent"><span class="agmark" aria-hidden="true">${esc(initials(h.agency || h.source))}</span><div><b>${esc(h.agency || h.source || "")}</b>${h.agent ? `<span>${esc(h.agent)}</span>` : ""}</div></div>
         <a class="btn" href="${esc(h.url)}" target="_blank" rel="noopener">Contact on ${esc(h.source || "the advert")}${ic("ext")}</a>
@@ -739,6 +911,75 @@ function viewDetail(id) {
     <a class="btn" href="${esc(h.url)}" target="_blank" rel="noopener">View advert${ic("ext")}</a>
   </div>` + foot();
 }
+function money(h) {
+  const none = h.deposit === 0 || h.facts.some(x => /no.deposit/i.test(x));
+  const dep = h.deposit ? R(h.deposit) : none ? "None, the advert says (terms apply)" : `Not stated. Allow ${R(h.rent)} to ${R(h.rent * 2)}`;
+  const tot = h.deposit ? R(h.rent + h.deposit) : none ? R(h.rent) : `${R(h.rent * 2)} to ${R(h.rent * 3)}`;
+  return `<section class="panel" aria-labelledby="mo-h"><h2 id="mo-h">Money to move in</h2>
+    <dl class="ov"><dt>First month's rent</dt><dd>${R(h.rent)}</dd><dt>Deposit</dt><dd>${esc(dep)}</dd><dt class="tot">Before you get the keys</dt><dd class="tot">${esc(tot)}</dd></dl>
+    <p class="hint">${h.deposit || none ? "" : "The advert gives no deposit. One to two months' rent is common, so this is a range until the agent confirms. "}Ask about lease or admin fees and any electricity deposit. Adverts rarely list them.</p></section>`;
+}
+/* ---------- quick sort: one home at a time ---------- */
+const deckPool = () => S.homes.filter(h => h.bains ? passes(h, true) : passes(h));
+const deckQueue = () => deckPool().filter(h => !mine(h.id).v).sort((a, b) => rank(a) - rank(b) || a.rent - b.rent);
+function viewSort() {
+  const pool = deckPool(), q = deckQueue(), done = pool.length - q.length, n = saved().length;
+  const undo = S.undo.length ? `<button type="button" class="btn ghost" data-deck="undo">${ic("back")}Undo the last one</button>` : "";
+  const head = `<div class="pagehead"><h1>Quick sort</h1><p>${q.length ? `${q.length} to go. Swipe right if you love it, left if it's not for us, or use the buttons.` : "That's all of them."}</p>
+    <div class="bar l" role="progressbar" aria-label="Homes sorted" aria-valuemin="0" aria-valuemax="${pool.length}" aria-valuenow="${done}"><i style="width:${pool.length ? done / pool.length * 100 : 0}%"></i></div></div>`;
+  if (!q.length) return head + `<div class="empty" style="margin-top:16px"><b>${pool.length ? "Every home here has your answer." : "No homes match the filters."}</b>
+    <p>${n ? `${n} saved so far. Send your picks when you're ready.` : "Nothing saved yet. Change the filters on the Homes page to see more."}</p>
+    <div class="row2">${n ? `<a class="btn rose" href="#saved">See saved homes</a>` : ""}<a class="btn ghost" href="#homes">Back to all homes</a>${undo}</div></div>` + foot();
+  return head + `<div class="deck" id="deck">${q.slice(0, 3).map((h, i) => `<div class="deck-card${i ? "" : " top"}" style="--d:${i};z-index:${3 - i}"${i ? " inert" : ""}>${card(h)}<span class="stamp love">Love it</span><span class="stamp no">Not for us</span></div>`).join("")}</div>
+    <div class="deckbtns" role="group" aria-label="Your answer for ${esc(q[0].title)}">
+      <button type="button" data-deck="no">${ic("close")}Not for us</button>
+      <button type="button" data-deck="maybe">${ic("ask")}Maybe</button>
+      <button type="button" data-deck="love">${ic("heart")}Love it</button></div>
+    <div class="deckfoot">${undo}</div>
+    <footer class="foot"><p>Quick sort uses the area, rent and must-have filters from the Homes page. Tap a home's name to read everything about it first.</p></footer>`;
+}
+function deckAct(v) {
+  if (v === "undo") { const u = S.undo.pop(); if (u) { S.me[u.id] = u.prev; store.set("me", S.me); render(); } return; }
+  const h = deckQueue()[0], el = $(".deck-card.top");
+  if (!h || S.flying) return;
+  S.flying = true;
+  if (el) { el.classList.remove("dragging"); el.classList.add("fly-" + v); }
+  setTimeout(() => {
+    S.flying = false; S.undo.push({ id: h.id, prev: Object.assign({}, mine(h.id)) });
+    setMe(h.id, { v, heart: v === "love" ? true : v === "no" ? false : !!mine(h.id).heart });
+    if (S.route.name === "sort") render();
+  }, el ? 250 : 0);
+}
+let drag = null;
+document.addEventListener("pointerdown", e => {
+  const c = e.target.closest && e.target.closest(".deck-card.top");
+  if (!c || e.target.closest(".heart") || S.flying) return;
+  drag = { c, x: e.clientX, y: e.clientY, dx: 0, moved: false };
+});
+document.addEventListener("pointermove", e => {
+  if (!drag) return;
+  drag.dx = e.clientX - drag.x;
+  if (!drag.moved) {
+    if (Math.abs(drag.dx) < 10) return;
+    if (Math.abs(e.clientY - drag.y) > Math.abs(drag.dx)) { drag = null; return; }
+    drag.moved = true; drag.c.classList.add("dragging");
+    try { drag.c.setPointerCapture(e.pointerId); } catch {}
+  }
+  drag.c.style.transform = `translateX(${drag.dx}px) rotate(${drag.dx / 18}deg)`;
+  drag.c.dataset.hint = drag.dx > 60 ? "love" : drag.dx < -60 ? "no" : "";
+});
+const dragEnd = () => {
+  if (!drag) return;
+  const d = drag; drag = null;
+  if (!d.moved) return;
+  S.swallow = true; setTimeout(() => S.swallow = false, 80);
+  d.c.classList.remove("dragging"); d.c.style.transform = "";
+  if (Math.abs(d.dx) > 90) deckAct(d.dx > 0 ? "love" : "no"); else d.c.dataset.hint = "";
+};
+document.addEventListener("pointerup", dragEnd);
+document.addEventListener("pointercancel", dragEnd);
+document.addEventListener("dragstart", e => { if (e.target.closest && e.target.closest(".deck-card")) e.preventDefault(); });
+
 function viewSaved() {
   const ps = saved().sort((a, b) => (b.bains ? 1 : 0) - (a.bains ? 1 : 0) || a.rent - b.rent);
   if (!ps.length) return `<div class="pagehead"><h1>Saved homes</h1></div><div class="empty" style="margin-top:16px"><b>Nothing saved yet.</b><p>Tap the heart on any home to keep it here, then send your picks in one go.</p><a class="btn" href="#homes">Browse homes</a></div>` + foot();
@@ -758,10 +999,14 @@ const PLAN = [
 ];
 function viewPlan() {
   const done = store.get("plan", {});
+  const keys = PLAN.flatMap(p => p[1].map(i => i[0])), dn = keys.filter(k => done[k]).length;
   return `<div class="pagehead"><h1>The plan</h1><p>Tick things off as you go. Ticks are saved on this phone.</p></div>
+    <div class="cd"><p class="n">${DAYS > 0 ? DAYS : DAYS === 0 ? "Today" : "Done"}<small>${DAYS > 0 ? `day${DAYS === 1 ? "" : "s"} to 1 December` : DAYS === 0 ? "is moving day" : "1 December has passed"}</small></p>
+      <div class="txt"><div class="bar"><i id="planbar" style="width:${dn / keys.length * 100}%"></i></div><b id="planlbl">${dn} of ${keys.length} done</b>
+      <p>One Bloemfontein rental agency has told its tenants it closes from 11 December to 6 January. Others may keep similar hours, so aim to sign the lease and pay the deposit in November.</p></div></div>
     <div class="plan">${PLAN.map(([t, items]) => `<section><h2>${t}</h2><ul>${items.map(([k, x]) => `<li><label><input type="checkbox" data-plan="${k}" ${done[k] ? "checked" : ""}><span>${x}</span></label></li>`).join("")}</ul></section>`).join("")}</div>${foot()}`;
 }
-const foot = () => `<footer class="foot"><p>Adverts checked ${esc(S.checked)}. Rent, dates and availability are set by the agents and can change. Pictures are drawings based on each advert unless you've added your own; tap Photos on any home to see the agent's real photos.</p></footer>`;
+const foot = () => `<footer class="foot"><p>Adverts last checked ${esc(S.checked)}; each home's page shows its own date. Rent, dates and availability are set by the agents and can change. Floor sizes come from the adverts, so check them at the viewing. Pictures are drawings based on each advert unless you've added your own; tap Photos on any home to see the agent's real photos.</p></footer>`;
 
 /* ---------- render ---------- */
 function syncControls() {
@@ -771,16 +1016,17 @@ function syncControls() {
 function render() {
   const r = S.route, main = $("#main");
   const hero = r.name === "homes";
-  $("#hero").hidden = !hero;
+  $("#hero").hidden = !hero; $("#mast").classList.toggle("slim", !hero);
   $("#tabbar").hidden = r.name === "detail";
-  main.innerHTML = r.name === "detail" ? viewDetail(r.id) : r.name === "saved" ? viewSaved() : r.name === "plan" ? viewPlan() : viewHomes();
+  main.innerHTML = r.name === "detail" ? viewDetail(r.id) : r.name === "saved" ? viewSaved() : r.name === "plan" ? viewPlan() : r.name === "sort" ? viewSort() : viewHomes();
+  if (r.name === "homes") setTimeout(() => S.fresh = false, 0);
   main.classList.remove("page-enter"); void main.offsetWidth; if (r.name !== "homes") main.classList.add("page-enter");
   $$("[data-nav]").forEach(a => a.setAttribute("aria-current", a.dataset.nav === (r.name === "detail" ? "homes" : r.name) ? "page" : "false"));
   const n = saved().length;
   $$("[data-count]").forEach(c => { c.hidden = !n; c.textContent = n; });
   $("#savedlbl").textContent = n ? `Saved ${n}` : "Saved";
   $("#savedbtn").classList.toggle("has", n > 0);
-  document.title = r.name === "detail" && S.byId.get(r.id) ? `${S.byId.get(r.id).title}, ${R(S.byId.get(r.id).rent)} | Our next home` : "Our next home";
+  document.title = r.name === "detail" && S.byId.get(r.id) ? `${S.byId.get(r.id).title}, ${R(S.byId.get(r.id).rent)} | Our next home` : r.name === "sort" ? "Quick sort | Our next home" : "Our next home";
   const slides = $("#slides");
   if (slides) {
     const n2 = PH.list(r.id).length;
@@ -795,7 +1041,7 @@ function route() {
   const prev = S.route.name;
   if (prev === "homes") S.homesScroll = scrollY;
   if (hsh.startsWith("home/")) S.route = { name: "detail", id: decodeURIComponent(hsh.slice(5)) };
-  else if (hsh === "saved" || hsh === "plan") S.route = { name: hsh };
+  else if (hsh === "saved" || hsh === "plan" || hsh === "sort") S.route = { name: hsh };
   else S.route = { name: "homes" };
   if (S.lb) { S.lb = null; drawLb(); }
   render();
@@ -864,12 +1110,16 @@ async function send() {
 
 /* ---------- events ---------- */
 document.addEventListener("click", e => {
+  if (S.swallow) { e.preventDefault(); return; }
   const t = e.target.closest("button,a"); if (!t) return;
+  if (t.dataset.deck) { deckAct(t.dataset.deck); return; }
   if (t.dataset.lbact) { lbAction(t.dataset.lbact); return; }
   if (t.dataset.lb != null && S.route.name === "detail") { S.lb = { id: S.route.id, i: Number(t.dataset.lb), del: false }; drawLb(); return; }
   if (t.dataset.heart) {
     const id = t.dataset.heart, on = !mine(id).heart; setMe(id, { heart: on });
-    t.setAttribute("aria-pressed", String(on)); const n = saved().length;
+    $$("[data-heart]").forEach(b => { if (b.dataset.heart === id) { b.setAttribute("aria-pressed", String(on)); b.setAttribute("aria-label", `${on ? "Remove from saved" : "Save"}: ${S.byId.get(id) ? S.byId.get(id).title : ""}`); } });
+    t.classList.remove("pop"); void t.offsetWidth; if (on) t.classList.add("pop");
+    const n = saved().length;
     $$("[data-count]").forEach(c => { c.hidden = !n; c.textContent = n; }); $("#savedlbl").textContent = n ? `Saved ${n}` : "Saved"; $("#savedbtn").classList.toggle("has", n > 0);
     toast(on ? "Saved" : "Removed from saved"); return;
   }
@@ -899,11 +1149,14 @@ document.addEventListener("change", async e => {
   }
   const k = e.target.dataset.f;
   if (k) { S.f[k] = k === "max" ? Number(e.target.value) : e.target.value; store.set("filters2", S.f); render(); return; }
-  const p = e.target.dataset.plan; if (p) { const d = store.get("plan", {}); d[p] = e.target.checked; store.set("plan", d); }
+  const p = e.target.dataset.plan; if (p) { const d = store.get("plan", {}); d[p] = e.target.checked; store.set("plan", d);
+    const all = $$("[data-plan]"), dn = all.filter(c => c.checked).length;
+    if ($("#planbar")) { $("#planbar").style.width = dn / all.length * 100 + "%"; $("#planlbl").textContent = `${dn} of ${all.length} done`; } }
 });
 
 /* ---------- load ---------- */
 document.addEventListener("keydown", e => {
+  if (!S.lb && S.route.name === "sort" && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) { if (e.key === "ArrowRight") deckAct("love"); else if (e.key === "ArrowLeft") deckAct("no"); else if (e.key === "ArrowUp") { e.preventDefault(); deckAct("maybe"); } return; }
   if (!S.lb) return;
   if (e.key === "Escape") lbAction("close"); else if (e.key === "ArrowRight") lbAction("next"); else if (e.key === "ArrowLeft") lbAction("prev");
 });
@@ -924,6 +1177,8 @@ Promise.all([fetch("listings.json", { cache: "no-cache" }).then(r => r.json()), 
   const ids = S.homes.map(h => h.id), seen = store.get("seen", null);
   if (seen) S.newIds = ids.filter(id => !seen.includes(id));
   store.set("seen", ids);
+  const decN = S.homes.filter(h => timing(h).dec).length;
+  $("#herosub").textContent = `${S.homes.length} homes checked, ${decN} advertised for 1 December, from ${R(Math.min(...S.homes.map(h => h.rent)))} a month. Bains first.`;
   syncControls(); route();
 }).catch(() => { $("#main").innerHTML = `<div class="empty" style="margin-top:24px"><b>The homes didn't load.</b><p>Check your connection, then refresh the page.</p></div>`; });
 })();

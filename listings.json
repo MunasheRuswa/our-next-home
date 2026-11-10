@@ -1,5 +1,5 @@
 {
- "checked": "31 October and 1 November 2026",
+ "checked": "10 November 2026",
  "homes": [
   {
    "id": "p24-112386134",
@@ -162,6 +162,46 @@
     "pool": false,
     "wendy": false,
     "palette": 0
+   },
+   "pick": "budget"
+  },
+  {
+   "id": "p24-117789030",
+   "title": "Langenhovenpark apartment, two parking bays",
+   "suburb": "Langenhovenpark",
+   "type": "Apartment",
+   "rent": 6400,
+   "deposit": null,
+   "beds": 2,
+   "baths": 1,
+   "size": null,
+   "parking": "2 parking bays",
+   "outdoor": null,
+   "security": [],
+   "available": "2026-12-01",
+   "utilities": null,
+   "agency": null,
+   "agent": null,
+   "ref": "117789030",
+   "source": "Property24",
+   "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/117789030",
+   "checked": "2026-11-10",
+   "areaNote": null,
+   "facts": [],
+   "unknowns": [
+    "Which complex is it in? The advert names neither the complex nor the agency."
+   ],
+   "bains": null,
+   "draw": {
+    "form": "apartment",
+    "garden": false,
+    "balcony": false,
+    "garage": false,
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 1
    }
   },
   {
@@ -265,7 +305,7 @@
    "ref": "114057969",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/arcadia-sh/bloemfontein/free-state/18346/114057969",
-   "checked": "2026-11-01",
+   "checked": "2026-11-10",
    "areaNote": "Inside Bains Lodge, per the advert.",
    "facts": [
     "Two double bedrooms",
@@ -297,6 +337,43 @@
    }
   },
   {
+   "id": "p24-117711472",
+   "title": "Westdene flat, 95 m²",
+   "suburb": "Westdene",
+   "type": "Apartment",
+   "rent": 6800,
+   "deposit": null,
+   "beds": 2,
+   "baths": 1.5,
+   "size": 95,
+   "parking": "1 parking bay",
+   "outdoor": null,
+   "security": [],
+   "available": "2026-11-10",
+   "utilities": null,
+   "agency": "RE/MAX First",
+   "agent": null,
+   "ref": "117711472",
+   "source": "Property24",
+   "url": "https://www.property24.com/to-rent/westdene/bloemfontein/free-state/9707/117711472",
+   "checked": "2026-11-10",
+   "areaNote": null,
+   "facts": [],
+   "unknowns": [],
+   "bains": null,
+   "draw": {
+    "form": "apartment",
+    "garden": false,
+    "balcony": false,
+    "garage": false,
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 2
+   }
+  },
+  {
    "id": "p24-117720714",
    "title": "Walled ground-floor flat",
    "suburb": "Universitas",
@@ -318,7 +395,7 @@
    "ref": "117720714",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/117720714",
-   "checked": "2026-10-31",
+   "checked": "2026-11-10",
    "areaNote": null,
    "facts": [
     "Built-in cupboards in both bedrooms",
@@ -344,7 +421,8 @@
     "pool": false,
     "wendy": false,
     "palette": 0
-   }
+   },
+   "pick": "budget"
   },
   {
    "id": "p24-117029952",
@@ -451,7 +529,7 @@
    "ref": "110393154",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/bainsvlei/bloemfontein/free-state/12675/110393154",
-   "checked": "2026-11-01",
+   "checked": "2026-11-10",
    "areaNote": "Bainsvlei. The advert doesn't name the complex, so ask whether it's at Bains Lodge.",
    "facts": [
     "First floor of a new development",
@@ -478,6 +556,47 @@
     "pool": true,
     "wendy": false,
     "palette": 1
+   }
+  },
+  {
+   "id": "p24-110342948",
+   "title": "The Bridge, first floor",
+   "suburb": "Langenhovenpark",
+   "type": null,
+   "rent": 7400,
+   "deposit": null,
+   "beds": null,
+   "baths": null,
+   "size": null,
+   "parking": null,
+   "outdoor": null,
+   "security": [],
+   "available": "2026-12-01",
+   "utilities": null,
+   "agency": null,
+   "agent": null,
+   "ref": "110342948",
+   "source": "Property24",
+   "url": "https://www.property24.com/to-rent/langenhovenpark/bloemfontein/free-state/9735/110342948",
+   "checked": "2026-11-10",
+   "areaNote": null,
+   "facts": [
+    "First floor, in The Bridge"
+   ],
+   "unknowns": [
+    "Confirm it has two bedrooms, and ask about bathrooms and parking."
+   ],
+   "bains": null,
+   "draw": {
+    "form": "apartment",
+    "garden": false,
+    "balcony": false,
+    "garage": false,
+    "carport": false,
+    "wall": false,
+    "pool": false,
+    "wendy": false,
+    "palette": 3
    }
   },
   {
@@ -522,7 +641,8 @@
     "pool": false,
     "wendy": false,
     "palette": 4
-   }
+   },
+   "pick": "short"
   },
   {
    "id": "p24-117547468",
@@ -634,7 +754,7 @@
    "ref": "110260662",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/110260662",
-   "checked": "2026-10-31",
+   "checked": "2026-11-10",
    "areaNote": null,
    "facts": [
     "Main bedroom en suite",
@@ -645,7 +765,8 @@
    ],
    "unknowns": [
     "How much are the electricity deposit and connection fees?",
-    "Is the garden private?"
+    "Is the garden private?",
+    "A search result suggests this home may also be for sale. Ask whether the owner is selling."
    ],
    "bains": null,
    "draw": {
@@ -658,7 +779,9 @@
     "pool": false,
     "wendy": false,
     "palette": 0
-   }
+   },
+   "pick": "short",
+   "reduced": true
   },
   {
    "id": "p24-101351728",
@@ -680,7 +803,7 @@
    "ref": "101351728",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/101351728",
-   "checked": "2026-10-31",
+   "checked": "2026-11-10",
    "areaNote": null,
    "facts": [
     "The advert says it is within walking distance of UFS"
@@ -802,7 +925,7 @@
    "ref": "117770025",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/117770025",
-   "checked": "2026-10-31",
+   "checked": "2026-11-10",
    "areaNote": null,
    "facts": [
     "Lots of cupboard space"
@@ -888,7 +1011,7 @@
    "ref": "RR4810913",
    "source": "Private Property",
    "url": "https://www.privateproperty.co.za/to-rent/free-state/central-free-state/bloemfontein/langenhoven-park/RR4810913",
-   "checked": "2026-10-31",
+   "checked": "2026-11-10",
    "areaNote": null,
    "facts": [
     "Open-plan lounge and kitchen",
@@ -914,7 +1037,8 @@
     "pool": false,
     "wendy": true,
     "palette": 3
-   }
+   },
+   "pick": "short"
   },
   {
    "id": "p24-106820384",
@@ -1088,7 +1212,8 @@
     "pool": false,
     "wendy": false,
     "palette": 1
-   }
+   },
+   "pick": "short"
   },
   {
    "id": "p24-117711689",
@@ -1200,7 +1325,7 @@
    "ref": "117682325",
    "source": "Property24",
    "url": "https://www.property24.com/to-rent/universitas/bloemfontein/free-state/9701/117682325",
-   "checked": "2026-10-31",
+   "checked": "2026-11-10",
    "areaNote": null,
    "facts": [
     "Two en-suite bathrooms",
@@ -1225,7 +1350,8 @@
     "pool": false,
     "wendy": false,
     "palette": 4
-   }
+   },
+   "pick": "short"
   },
   {
    "id": "p24-117636354",
@@ -1272,7 +1398,8 @@
     "pool": false,
     "wendy": false,
     "palette": 2
-   }
+   },
+   "pick": "short"
   },
   {
    "id": "p24-117684081",

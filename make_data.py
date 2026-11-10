@@ -1,6 +1,11 @@
 """Build listings.json for the public site from an export of the private board.
 
 Usage: python3 make_data.py <folder of listing JSON files> listings.json
+       python3 make_data.py --overlay listings.json   (re-apply extras.json only)
+
+extras.json (next to this script) is applied last: its "patch" updates homes by
+id (shortlist picks, reduced flags, re-check dates, extra questions) and its
+"homes" adds adverts the board doesn't hold yet.
 
 Keeps active homes that have an advert link and don't exclude children.
 Bains homes are flagged so the site can show them first; everything else
@@ -14,6 +19,31 @@ import re
 import sys
 
 src, out = sys.argv[1], sys.argv[2]
+EXTRAS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "extras.json")
+
+
+def overlay(data):
+    if not os.path.exists(EXTRAS):
+        return data
+    ex = json.load(open(EXTRAS, encoding="utf-8"))
+    ids = {h["id"] for h in data["homes"]}
+    data["homes"] += [h for h in ex.get("homes", []) if h["id"] not in ids]
+    for h in data["homes"]:
+        patch = dict(ex.get("patch", {}).get(h["id"], {}))
+        for q in patch.pop("add_unknowns", []):
+            if q not in h["unknowns"]:
+                h["unknowns"].append(q)
+        h.update(patch)
+    data["homes"].sort(key=lambda h: (h["rent"], h["title"]))
+    data["checked"] = ex.get("checked", data["checked"])
+    return data
+
+
+if src == "--overlay":
+    d = overlay(json.load(open(out, encoding="utf-8")))
+    json.dump(d, open(out, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    print(len(d["homes"]), "homes after extras")
+    sys.exit()
 
 
 def has(text, *words):
@@ -92,7 +122,9 @@ for path in glob.glob(os.path.join(src, "*.json")):
     })
 
 homes.sort(key=lambda h: (h["rent"], h["title"]))
-json.dump({"checked": "31 October and 1 November 2026", "homes": homes}, open(out, "w"), indent=1, ensure_ascii=False)
+homes = overlay({"checked": "31 October and 1 November 2026", "homes": homes})["homes"]
+checked = json.load(open(EXTRAS, encoding="utf-8")).get("checked") if os.path.exists(EXTRAS) else "31 October and 1 November 2026"
+json.dump({"checked": checked, "homes": homes}, open(out, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 
 dec = [h for h in homes if h["available"] and "2026-11-24" <= h["available"] <= "2026-12-08"]
 print(len(homes), "homes;", len(dec), "advertised for 1 December;", sum(1 for h in homes if h["bains"]), "at Bains")
